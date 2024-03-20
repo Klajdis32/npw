@@ -368,6 +368,11 @@
         margin-left: 5%;
         width: 90%;
     }
+
+    .tolath {
+        margin-left: 5%;
+        width: 90%;
+    }
  
     }
 

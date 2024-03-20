@@ -378,7 +378,10 @@
         <p>Δεν μπορώ να διαλέξω ακόμα η φυσική έχει πολλά όμορφα μονοπάτια.</p>
 
         <strong>Γνώσεις:</strong>
-        <p>Διαθέτω ένα ακόρεστο πάθος για μάθηση και είμαι πάντα πρόθυμος να αποκτήσω νέες γνώσεις. Παράλληλα με τις θεμελιώδεις έννοιες που διδάσκονται στο σχολείο, έχω επιδιώξει ενεργά τα ενδιαφέροντά μου στην αστρονομία και τον προγραμματισμό υπολογιστών. Το 2021 συμμετείχα στα δωρεάν διαδικτυακά μαθήματα αστρονομίας που προσφέρει η Αστρονομική Εταιρεία Πάτρας Orion και μάλιστα προκρίθηκα στο πρώτο στάδιο του Πανελληνίου Μαθητικού Διαγωνισμού Αστρονομίας και Αστροφυσικής. Πήρα επίσης μέρος σε δύο άλλους διαγωνισμούς που διοργάνωσε η ΄Ενωση Ελλήνων Φυσικών. Επιπλέον, με τη βοήθεια του αδερφού μου, που σπουδάζει πληροφορική στο ίδιο πανεπιστήμιο, και μέσω διαδικτυακών πόρων όπως το Github και μέσω βίντε απο το YouTube, έμαθα τα βασικά των γλωσσών προγραμματισμού όπως C, Python καιJavaScript. Γνωρίζω ακόμη Html και Css, αυτή η γνώση με βοήθησε πολύ στο να δημιουργήσω τη συγκεκριμένη ιστοσελίδα. Επιπλέον, μου αρέσει να διαβάζω βιβλία για ένα ευρύ φάσμα θεμάτων, όπως η φυσική, τα οικονομικά, η επιστημονική φαντασία και η φιλοσοφία.
+        <p>Διαθέτω ένα ακόρεστο πάθος για μάθηση και είμαι πάντα πρόθυμος να αποκτήσω νέες γνώσεις. Παράλληλα με τις θεμελιώδεις έννοιες που διδάσκονται στο σχολείο, έχω επιδιώξει ενεργά τα ενδιαφέροντά μου στην αστρονομία και τον προγραμματισμό υπολογιστών. 
+            <br><br>Το 2021 συμμετείχα στα δωρεάν διαδικτυακά μαθήματα αστρονομίας που προσφέρει η Αστρονομική Εταιρεία Πάτρας Orion και μάλιστα προκρίθηκα στο πρώτο στάδιο του Πανελληνίου Μαθητικού Διαγωνισμού Αστρονομίας και Αστροφυσικής. Πήρα επίσης μέρος σε δύο άλλους διαγωνισμούς που διοργάνωσε η ΄Ενωση Ελλήνων Φυσικών. 
+            <br><br>Επιπλέον, με τη βοήθεια του αδερφού μου, που σπουδάζει πληροφορική στο ίδιο πανεπιστήμιο, και μέσω διαδικτυακών πόρων όπως το Github και μέσω βίντε απο το YouTube, έμαθα τα βασικά των γλωσσών προγραμματισμού όπως C, Python καιJavaScript. Γνωρίζω ακόμη Html και Css, αυτή η γνώση με βοήθησε πολύ στο να δημιουργήσω τη συγκεκριμένη ιστοσελίδα. 
+            <br><br>Επιπλέον, μου αρέσει να διαβάζω βιβλία για ένα ευρύ φάσμα θεμάτων, όπως η φυσική, τα οικονομικά, η επιστημονική φαντασία και η φιλοσοφία.
         </p>
 
         <strong>Εκτός μάθησης, μου αρέσει:</strong>
@@ -397,9 +400,10 @@
         <p>Ich kann mich noch nicht entscheiden, die Physik hat viele schöne Wege.</p>
 
         <strong>Wissen:</strong>
-        <p>Ich besitze eine unstillbare Leidenschaft für das Lernen und bin stets bestrebt, mir neues Wissen anzueignen. Neben den in der Schule gelehrten Grundkonzepten habe ich mein Interesse an Astronomie und Computerprogrammierung aktiv verfolgt. Im Jahr 2021 nahm ich an den kostenlosen Online-Astronomiekursen teil, die vom patrasischen Astronomieunternehmen Orion angeboten wurden und qualifizierte sich sogar für die erste Stufe des Panhellenischen Studentenwettbewerbs für Astronomie und Astrophysik. Ich habe auch an zwei weiteren Wettbewerben teilgenommen, die von der Griechischen Physikervereinigung organisiert wurden.
-        Außerdem mit Hilfe meiner Bruder , der an derselben Universität Informatik studiert, und über Online-Ressourcen wie Github und Videos von YouTube, Ich habe die Grundlagen von Computersprachen wie C, Python und JavaScript erlernt und beherrsche außerdem HTML und CSS. Dieses Wissen wurde Er hat mir maßgeblich bei der Erstellung dieser Webseite geholfen.
-        Außerdem lese ich gerne Bücher zu einem breiten Themenspektrum darunter Physik, Wirtschaftswissenschaften, Science-Fiction und Philosophie.</p>
+        <p>Ich besitze eine unstillbare Leidenschaft für das Lernen und bin stets bestrebt, mir neues Wissen anzueignen. Neben den in der Schule gelehrten Grundkonzepten habe ich mein Interesse an Astronomie und Computerprogrammierung aktiv verfolgt. 
+        <br><br>Im Jahr 2021 nahm ich an den kostenlosen Online-Astronomiekursen teil, die vom patrasischen Astronomieunternehmen Orion angeboten wurden und qualifizierte sich sogar für die erste Stufe des Panhellenischen Studentenwettbewerbs für Astronomie und Astrophysik. Ich habe auch an zwei weiteren Wettbewerben teilgenommen, die von der Griechischen Physikervereinigung organisiert wurden.
+        <br><br>Außerdem mit Hilfe meiner Bruder , der an derselben Universität Informatik studiert, und über Online-Ressourcen wie Github und Videos von YouTube, Ich habe die Grundlagen von Computersprachen wie C, Python und JavaScript erlernt und beherrsche außerdem HTML und CSS. Dieses Wissen wurde Er hat mir maßgeblich bei der Erstellung dieser Webseite geholfen.
+        <br><br>Außerdem lese ich gerne Bücher zu einem breiten Themenspektrum darunter Physik, Wirtschaftswissenschaften, Science-Fiction und Philosophie.</p>
 
         <strong>Außerhalb des Lernens macht mir Folgendes Spaß:</strong>
         <p>
