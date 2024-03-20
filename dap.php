@@ -13,6 +13,24 @@
             background-color: #f2f2f2;
         }
 
+        
+    ::-webkit-scrollbar {
+            width: 15px; 
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #333; /* Χρώμα φόντου του track */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #555; /* Χρώμα του thumb */
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #666; /* Χρώμα του thumb κατά το hover */
+        }
+
         .dark-mode {
         background-color: #282828; /* Σκοτεινό φόντο */
         color: #ffffff; /* Λευκό χρώμα κειμένου */
