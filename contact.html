@@ -48,6 +48,20 @@
         .header {
             border-bottom: 1px solid white;
         }
+
+        .contact {
+    
+            box-shadow: rgba(255, 255, 255, 0.5) 0px 5px 15px;
+        }
+
+        .contact:hover {
+            box-shadow: rgba(255, 255, 255, 0.9) 0px 5px 15px;
+        }
+
+        .contact a {
+        color: white;
+        }
+
     }
 
         .header {
@@ -120,7 +134,7 @@
     }
 
     .todiv img {
-        width: 5%;
+        width: 7%;
     }
     
     .todiv span {
@@ -148,18 +162,38 @@
         padding: 0px;
     }
 
-    .NasaImg {
-        cursor: pointer;
-        width: 50%;
-        border: 2px solid darkgrey;
-        border-radius: 5px;
+    .contact {
+        width: 30%;
+        display: flex;
+        border: 2px solid white;
+        border-radius: 100px;
+        padding: 10px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
     }
 
-    .kinito p {
+    .contact:hover {
+        box-shadow: rgba(0, 0, 0, 0.9) 0px 5px 15px;
+    }
+
+    .contact a {
+        color: black;
+        display: flex;
+        text-decoration: none;
+    }
+
+    .contact img {
+        width: 12%;
+    }
+
+    .contact p {
+        margin-left: 40px;
         font-weight: 500;
         font-size: 18px;
     }
-
 
     /* Κανόνες CSS για tablet */
     @media (min-width: 601px) and (max-width: 768px) {
@@ -274,6 +308,17 @@
         width: 90%;
         margin-left: 5%;
     }
+
+    .contact {
+        width: 80%;
+        padding: 10px;
+    }
+
+
+    .contact img {
+        width: 12%;
+    }
+
     }
 
 
@@ -297,67 +342,12 @@
 
 <div class="container">
 
-            <div class="kinito">
-                <div style="text-align: center; margin-top: 40px;"><h2>NASA's Astronomy Picture/Video<br> of the Day</h2></div>
-                <br>
-                <div class="image-container" id="imageContainer" style="text-align: center;">
-                <img id="apodImg" class="NasaImg" src="" alt="NASA APOD">
-                </div>          
-                <br>
-                <p><strong>Caption: </strong> <span id="apodCaption"></span><br><br>
-                <strong>Date:</strong> <span id="apodDate"></span><br><br>
-                <strong>Explanation:<br><br></strong> <span id="apodExplanation"></span><br><br>
-                <strong>References:</strong> <a href="https://apod.nasa.gov/apod/" class="toa1">Apod.nasa.gov</a><br><br>
-                <strong>Data provided by NASA Astronomy Picture of the Day (APOD)</strong> <a href="https://api.nasa.gov/planetary/apod" class="toa1">API</a></p>
-                <br><br><br><br><br><br>
-          </div>
-
-          <script>
-              // Make a request to the APOD API
-              fetch('https://api.nasa.gov/planetary/apod?api_key=wNu2CW6MkRKeGOLgiAeLxoxVkLPGhQpj0KIqz0Tf')
-              .then(response => response.json())
-              .then(data => {
-                // Check if the media type is image or shorts
-                if (data.media_type === 'image') {
-                  // Create a new image element
-                  const image = document.createElement('img');
-                  image.src = data.url;
-                  image.alt = data.title;
-
-                  // Set the image source and alt attribute of the existing image element
-                  const apodImg = document.getElementById('apodImg');
-                  apodImg.src = image.src;
-                  apodImg.alt = image.alt;
-
-                } else if (data.media_type === 'video') {
-                  // Create a new video element
-                  const video = document.createElement('iframe');
-                  video.width = '100%';
-                  video.height = '600';
-                  video.src = data.url;
-                  video.title = data.title;
-                  video.frameBorder = '0';
-                  video.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-                  video.allowFullscreen = true;
-
-                  // Replace the image container with the video element
-                  const imageContainer = document.getElementById('imageContainer');
-                  imageContainer.innerHTML = '';
-                  imageContainer.appendChild(video);
-                }
-
-                // Set the image caption and date
-                document.getElementById('apodCaption').textContent = data.title;
-                document.getElementById('apodDate').textContent = data.date;
-                document.getElementById('apodExplanation').textContent = data.explanation;
-              })
-              .catch(error => {
-                console.error('Error fetching APOD:', error);
-              });
-          
-       
-
-          </script>
+    <div class="contact">
+        <a href="mailto:ktsami@auth.gr">
+            <img src="images/send1.png" alt="">
+            <p>ktsami@auth.gr</p>
+        </a>
+    </div>
 
 </div>
 
@@ -378,13 +368,13 @@
             <a href="/npw/contact.html" class="toa">
                 <div class="todiv">
                         <img src="images/send1.png" alt=""><br>
-                        <span>Contact</span>
+                        <span id="toepi"><strong>Contact</strong></span>
                 </div>
             </a>
             <a href="/npw/dap.html" class="toa">
                 <div class="todiv">
                         <img src="images/astronomy.png" alt=""><br>
-                        <span id="toepi"><strong>DAP<strong></span>
+                        <span>DAP</span>
                 </div>
             </a>
     </div>
