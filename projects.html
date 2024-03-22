@@ -638,8 +638,8 @@ function createDynamicContent() {
                     <div class="blog-post_info">
                         <div class="blog-post_date">
                             <span>${post.Date}</span>
-                            <span>${post.Sigrafeas}</span>
                             <span>${post.Katigoria}</span>
+                            <span>${post.Sigrafeas}</span>
                         </div>
                         <h1 class="blog-post_title">${post.Titlos}</h1>
                         <p class="blog-post_text">${post.Keimeno}</p>
@@ -659,6 +659,54 @@ function createDynamicContent() {
 }
 
 createDynamicContent();
+
+function filterProjects(searchTerm) {
+    var container = document.getElementById("dynamicContentContainer");
+    container.innerHTML = ''; // Αδειάζουμε το περιεχόμενο του container
+
+    for (let i = 0; i < posts.length; i++) {
+        var post = posts[i];
+        // Έλεγχος αν το project πληροί τα κριτήρια αναζήτησης
+        if (post.Titlos.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            post.Keimeno.toLowerCase().includes(searchTerm.toLowerCase())) {
+            var wrapDiv = document.createElement("div");
+            wrapDiv.className = "wrap";
+
+            wrapDiv.innerHTML = `
+                <div class="blog-container">
+                    <div class="blog-post">
+                        <div class="blog-post_img">
+                            <img src="${post.image}" alt="">
+                        </div>
+                        <div class="blog-post_info">
+                            <div class="blog-post_date">
+                                <span>${post.Date}</span>
+                                <span>${post.Katigoria}</span>
+                                <span>${post.Sigrafeas}</span>
+                            </div>
+                            <h1 class="blog-post_title">${post.Titlos}</h1>
+                            <p class="blog-post_text">${post.Keimeno}</p>
+                            <div class="todivmetaa">
+                                ${post.Link ? `<a href="${post.Link}" class="blog-post_cta">Link</a>` : ''}
+                                ${post.pdf ? `<a href="${post.pdf}" class="blog-post_cta">Pdf</a>` : ''}
+                                ${post.file ? `<a href="${post.file}" class="blog-post_cta">File</a>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.appendChild(wrapDiv);
+        }
+    }
+}
+
+// Προσθήκη event listener στη φόρμα αναζήτησης
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Αποτροπή προεπιλεγμένης συμπεριφοράς της φόρμας
+
+    var searchTerm = document.getElementById('search').value;
+    filterProjects(searchTerm); // Φιλτράρισμα των projects βάσει της αναζήτησης
+});
     </script>
 
 </html>
