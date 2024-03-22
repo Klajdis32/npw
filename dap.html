@@ -155,9 +155,37 @@
         border-radius: 5px;
     }
 
+    .kinito {
+        display: none;
+    }
+
     .kinito p {
         font-weight: 500;
         font-size: 18px;
+    }
+
+    .loading{
+        display: block;
+        position: absolute;
+        top: 45%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+    }
+
+    .loading img{
+        width: 40%;
+    }
+    
+    .toerror{
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .toerror img{
+        width: 100%;
     }
 
 
@@ -274,6 +302,17 @@
         width: 90%;
         margin-left: 5%;
     }
+
+    .loading{
+        position: absolute;
+        top: 45%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+    }
+
+    .loading img{
+        width: 60%;
+    }
     }
 
 
@@ -297,7 +336,15 @@
 
 <div class="container">
 
-            <div class="kinito">
+            <div class="loading" id="loadingDiv">
+                <img src="images/marsloading.gif" alt="" >
+            </div>
+
+            <div class="toerror" id="errorDiv">
+                <img src="images/error.png" alt="" >
+            </div>
+
+            <div class="kinito" id="kinitoDiv">
                 <div style="text-align: center; margin-top: 40px;"><h2>NASA's Astronomy Picture/Video<br> of the Day</h2></div>
                 <br>
                 <div class="image-container" id="imageContainer" style="text-align: center;">
@@ -310,54 +357,67 @@
                 <strong>References:</strong> <a href="https://apod.nasa.gov/apod/" class="toa1">Apod.nasa.gov</a><br><br>
                 <strong>Data provided by NASA Astronomy Picture of the Day (APOD)</strong> <a href="https://api.nasa.gov/planetary/apod" class="toa1">API</a></p>
                 <br><br><br><br><br><br>
-          </div>
+            </div>
 
-          <script>
-              // Make a request to the APOD API
-              fetch('https://api.nasa.gov/planetary/apod?api_key=wNu2CW6MkRKeGOLgiAeLxoxVkLPGhQpj0KIqz0Tf')
-              .then(response => response.json())
-              .then(data => {
-                // Check if the media type is image or shorts
-                if (data.media_type === 'image') {
-                  // Create a new image element
-                  const image = document.createElement('img');
-                  image.src = data.url;
-                  image.alt = data.title;
-
-                  // Set the image source and alt attribute of the existing image element
-                  const apodImg = document.getElementById('apodImg');
-                  apodImg.src = image.src;
-                  apodImg.alt = image.alt;
-
-                } else if (data.media_type === 'video') {
-                  // Create a new video element
-                  const video = document.createElement('iframe');
-                  video.width = '100%';
-                  video.height = '600';
-                  video.src = data.url;
-                  video.title = data.title;
-                  video.frameBorder = '0';
-                  video.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-                  video.allowFullscreen = true;
-
-                  // Replace the image container with the video element
-                  const imageContainer = document.getElementById('imageContainer');
-                  imageContainer.innerHTML = '';
-                  imageContainer.appendChild(video);
-                }
-
-                // Set the image caption and date
-                document.getElementById('apodCaption').textContent = data.title;
-                document.getElementById('apodDate').textContent = data.date;
-                document.getElementById('apodExplanation').textContent = data.explanation;
-              })
-              .catch(error => {
-                console.error('Error fetching APOD:', error);
-              });
-          
-       
-
-          </script>
+            <script>
+                const loadingDiv = document.getElementById('loadingDiv');
+                const kinitoDiv = document.getElementById('kinitoDiv');
+                const errorDiv = document.getElementById('errorDiv');
+            
+                // Show loadingDiv
+                loadingDiv.style.display = 'block';
+            
+                // Delay the display of kinitoDiv by 4 seconds
+                setTimeout(() => {
+                    loadingDiv.style.display = 'none';
+                    kinitoDiv.style.display = 'block';
+                }, 4000);
+            
+                // Make a request to the APOD API
+                fetch('https://api.nasa.gov/planetary/apod?api_key=wNu2CW6MkRKeGOLgiAeLxoxVkLPGhQpj0KIqz0Tf')
+                .then(response => response.json())
+                .then(data => {
+                    // Check if the media type is image or shorts
+                    if (data.media_type === 'image') {
+                        // Create a new image element
+                        const image = document.createElement('img');
+                        image.src = data.url;
+                        image.alt = data.title;
+            
+                        // Set the image source and alt attribute of the existing image element
+                        const apodImg = document.getElementById('apodImg');
+                        apodImg.src = image.src;
+                        apodImg.alt = image.alt;
+            
+                    } else if (data.media_type === 'video') {
+                        // Create a new video element
+                        const video = document.createElement('iframe');
+                        video.width = '100%';
+                        video.height = '600';
+                        video.src = data.url;
+                        video.title = data.title;
+                        video.frameBorder = '0';
+                        video.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                        video.allowFullscreen = true;
+            
+                        // Replace the image container with the video element
+                        const imageContainer = document.getElementById('imageContainer');
+                        imageContainer.innerHTML = '';
+                        imageContainer.appendChild(video);
+                    }
+            
+                    // Set the image caption and date
+                    document.getElementById('apodCaption').textContent = data.title;
+                    document.getElementById('apodDate').textContent = data.date;
+                    document.getElementById('apodExplanation').textContent = data.explanation;
+                })
+                .catch(error => {
+                    console.error('Error fetching APOD:', error);
+                    loadingDiv.style.display = 'none';
+                    kinitoDiv.style.display = 'none';
+                    errorDiv.style.display = 'block';
+                });
+            </script>
 
 </div>
 
