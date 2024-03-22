@@ -97,7 +97,7 @@
         left: 0;
         width: 100%;
         border-top: 2px solid black;
-        height: auto;
+        height: 60px;
         background-color: white;
         color: #333;
         text-align: center;
@@ -105,7 +105,7 @@
     }
 
     .todiv{
-        padding: 10px;
+        padding: 5px;
         text-decoration: none;
     }
 
@@ -115,7 +115,7 @@
     }
 
     .todiv img {
-        width: 7%;
+        width: 5%;
     }
     
     .todiv span {
@@ -426,18 +426,6 @@
                 <div class="todiv">
                         <img src="images/planning.png" alt=""><br>
                         <span>Projects</span>
-                </div>
-            </a>
-            <a href="/NewPersonalWebsite/auth/login.php" class="toa">
-                <div class="todiv">
-                        <img src="images/enter.png" alt=""><br>
-                        <span>Login</span>
-                </div>
-            </a>
-            <a href="/NewPersonalWebsite/contact.php" class="toa">
-                <div class="todiv">
-                        <img src="images/send1.png" alt=""><br>
-                        <span>Contact</span>
                 </div>
             </a>
             <a href="/NewPersonalWebsite/dap.php" class="toa">

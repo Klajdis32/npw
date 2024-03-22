@@ -122,7 +122,7 @@
         left: 0;
         width: 100%;
         border-top: 2px solid black;
-        height: auto;
+        height: 60px;
         background-color: white;
         color: #333;
         text-align: center;
@@ -130,7 +130,7 @@
     }
 
     .todiv{
-        padding: 10px;
+        padding: 5px;
         text-decoration: none;
     }
 
@@ -140,7 +140,7 @@
     }
 
     .todiv img {
-        width: 7%;
+        width: 5%;
     }
     
     .todiv span {
@@ -550,73 +550,26 @@ label {
     <br><br>
 
     <div class="blog-container">
-
-    <?php
-        include 'auth/db_conn.php';
-
-        // Ερώτημα SQL για ανάκτηση των δεδομένων των έργων από τη βάση
-        $sql = "SELECT id, Image, Sigrafeas, Date, katigoria, Titlos, Keimeno, link, Pdf, File FROM project ORDER BY id DESC";
-        $result = $conn->query($sql);
-
-        // Έλεγχος αν υπάρχουν αποτελέσματα
-        if ($result->num_rows > 0) {
-            // Αν υπάρχουν αποτελέσματα
-            while($row = $result->fetch_assoc()) {
-                // Εκτύπωση των δεδομένων του κάθε έργου
-                echo '<div class="blog-post">';
-                
-                // Έλεγχος για την ύπαρξη εικόνας
-                if (!empty($row["Image"])) {
-                    echo '
-                        <div class="blog-post_img">
-                            <img src="data:image/jpeg;base64,' . base64_encode($row["Image"]) . '" alt="" >
-                        </div>
-                    ';
-                }
-                
-                echo '<div class="blog-post_info">
-                    <div class="blog-post_date">
-                        <span>' . $row["Sigrafeas"] . '</span>
-                        <span>' . $row["Date"] . '</span>
-                        <span>' . $row["katigoria"] . '</span>
-                    </div>
-                    <h1 class="blog-post_title">' . $row["Titlos"] . '</h1>
-                    <p class="blog-post_text">' . $row["Keimeno"] . '</p>';
-                    
-                echo '<div class="todivmetaa">';
-
-                if (!empty($row["link"])) {
-                    echo '
-                    <a href="' . $row["link"] . '" class="blog-post_cta">Read More</a>
-                    ';
-                }
-
-                if (!empty($row["Pdf"])) {
-                    echo '
-                    <a href="/NewPersonalWebsite' . $row["Pdf"] . '" class="blog-post_cta">Pdf</a>
-                    ';
-                }
-
-                if (!empty($row["File"])) {
-                    echo '
-                        <a href="/NewPersonalWebsite' . $row["File"] . '" class="blog-post_cta">File</a>
-                    ';
-                }
-                
-                echo '
-                        </div>
-                    </div>
+        <div class="blog-post">
+            <div class="blog-post_img">
+                <img src="data:image/jpeg;base64" alt="" >
+            </div>
+            <div class="blog-post_info">
+                <div class="blog-post_date">
+                    <span>Sigrafeas</span>
+                    <span>Date</span>
+                    <span>katigoria</span>
                 </div>
-                ';
-            }
-        } else {
-            echo '<div class="toerror"><p>0 results</p></div>';
-        }
-        // Κλείσιμο σύνδεσης
-        $conn->close();
-    ?>
+                <h1 class="blog-post_title">Titlos</h1>
+                <p class="blog-post_text">Keimeno</p>
+                <div class="todivmetaa">
+                    <a href="" class="blog-post_cta">Read More</a>
+                    <a href="" class="blog-post_cta">Read More</a>
+                    <a href="" class="blog-post_cta">Read More</a>
+                </div>
+            </div>
+        </div>
     <br><br><br><br>
-
     </div>
 
   
@@ -631,18 +584,6 @@ label {
                 <div class="todiv">
                         <img src="images/planning.png" alt=""><br>
                         <span id="toepi"><strong>Projects</strong></span>
-                </div>
-            </a>
-            <a href="/NewPersonalWebsite/auth/login.php" class="toa">
-                <div class="todiv">
-                        <img src="images/enter.png" alt=""><br>
-                        <span>Login</span>
-                </div>
-            </a>
-            <a href="/NewPersonalWebsite/contact.php" class="toa">
-                <div class="todiv">
-                        <img src="images/send1.png" alt=""><br>
-                        <span>Contact</span>
                 </div>
             </a>
             <a href="/NewPersonalWebsite/dap.php" class="toa">
