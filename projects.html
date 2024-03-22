@@ -8,6 +8,8 @@
 
     <script src="/npw/ProjectsDB.js"></script>
 
+    <!-- <script src="ProjectsDB.js"></script> -->
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -286,7 +288,6 @@ label {
 .blog-post_title {
     font-size: 20px;
     margin-top: -10px;
-    text-transform: uppercase;
     color: black;
 }
 
@@ -644,7 +645,9 @@ function createDynamicContent() {
                         <h1 class="blog-post_title">${post.Titlos}</h1>
                         <p class="blog-post_text">${post.Keimeno}</p>
                         <div class="todivmetaa">
-                            <a href="${post.Link}" class="blog-post_cta">Link</a>
+                            ${post.Link ? `<a href="${post.Link}" class="blog-post_cta">Link</a>` : ''}
+                            ${post.pdf ? `<a href="${post.pdf}" class="blog-post_cta">Pdf</a>` : ''}
+                            ${post.file ? `<a href="${post.file}" class="blog-post_cta">File</a>` : ''}
                         </div>
                     </div>
                 </div>
