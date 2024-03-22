@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
     <title>Klajdi</title>
+
+    <script src="/ProjectsDB.js"></script>
 
     <style>
         body {
@@ -549,28 +552,8 @@ label {
     </form>
     <br><br>
 
-    <div class="blog-container">
-        <div class="blog-post">
-            <div class="blog-post_img">
-                <img src="data:image/jpeg;base64" alt="" >
-            </div>
-            <div class="blog-post_info">
-                <div class="blog-post_date">
-                    <span>Sigrafeas</span>
-                    <span>Date</span>
-                    <span>katigoria</span>
-                </div>
-                <h1 class="blog-post_title">Titlos</h1>
-                <p class="blog-post_text">Keimeno</p>
-                <div class="todivmetaa">
-                    <a href="" class="blog-post_cta">Read More</a>
-                    <a href="" class="blog-post_cta">Read More</a>
-                    <a href="" class="blog-post_cta">Read More</a>
-                </div>
-            </div>
-        </div>
-    <br><br><br><br>
-    </div>
+    <div id="dynamicContentContainer"></div>
+
 
   
     <div class="footer">
@@ -637,6 +620,43 @@ label {
     }
 });
 
+
+function createDynamicContent() {
+    var container = document.getElementById("dynamicContentContainer");
+
+    for (let i = 0; i < posts.length; i++) {
+        var post = posts[i];
+        var wrapDiv = document.createElement("div");
+        wrapDiv.className = "wrap";
+
+        wrapDiv.innerHTML = `
+            <div class="blog-container">
+                <div class="blog-post">
+                    <div class="blog-post_img">
+                        <img src="${post.image}" alt="">
+                    </div>
+                    <div class="blog-post_info">
+                        <div class="blog-post_date">
+                            <span>${post.Date}</span>
+                            <span>${post.Sigrafeas}</span>
+                            <span>${post.Katigoria}</span>
+                        </div>
+                        <h1 class="blog-post_title">${post.Titlos}</h1>
+                        <p class="blog-post_text">${post.Keimeno}</p>
+                        <div class="todivmetaa">
+                            <a href="${post.Link}" class="blog-post_cta">Link</a>
+                        </div>
+                    </div>
+                </div>
+            <br><br><br><br>
+            </div>
+        `;
+
+        container.appendChild(wrapDiv);
+    }
+}
+
+createDynamicContent();
     </script>
 
 </html>
