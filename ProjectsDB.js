@@ -1,6 +1,6 @@
 const posts = [
     {
-        image: "/ProjectImages/Aero.jpg", 
+        image: "/npw/ProjectImages/Aero.jpg", 
         Titlos: "Simulation of linear motion", 
         Sigrafeas: "klajdi", 
         Date: "15/04/2023",
@@ -9,7 +9,7 @@ const posts = [
         Link: "/npw/attachments/pdfs/SimulationOfLinearMotion.pdf" 
     },
     {
-        image: "/ProjectImages/arduino.jpg", 
+        image: "/npw/ProjectImages/arduino.jpg", 
         Titlos: "Simple Arduino Project", 
         Sigrafeas: "Klajdi", 
         Date: "13/04/2023",
