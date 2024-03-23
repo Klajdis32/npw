@@ -8,7 +8,7 @@
 
     <script src="/npw/ProjectsDB.js"></script>
 
-    <!-- <script src="ProjectsDB.js"></script> -->
+    <script src="ProjectsDB.js"></script>
 
     <style>
         body {
@@ -342,6 +342,21 @@ label {
         display: none;
     }
 
+    .waves {
+        text-align: center;
+    }
+
+    #loadingDiv {
+        display: block;
+    }
+
+    .waves img {
+        width: 15%;
+    }
+
+    #dynamicContentContainer {
+        display: none;
+    }
     @media screen and (max-width: 1068px) {
         .blog-post {
             max-width: 80rem;
@@ -455,6 +470,22 @@ label {
             font-size: 25px;
             font-weight: 550;
         }
+
+        .arrow {
+            position: fixed;
+            bottom: 100px; 
+            right: -100%;
+            z-index: 9999;
+        }
+
+        .arrow img {
+            cursor: pointer;
+            width: 10%;
+        }
+
+        .waves img {
+        width: 40%;
+    }
     }
 
     /* Κανόνες CSS για κινητά */
@@ -553,6 +584,10 @@ label {
             cursor: pointer;
             width: 10%;
         }
+
+        .waves img {
+        width: 40%;
+    }
     }
 
     </style>
@@ -575,7 +610,6 @@ label {
     <img src="images/up-arrow.png" alt="" >
 </div>
 
-
 <div class="container">
 
     <br><p class="topstoproj">Projects</p><br>
@@ -588,6 +622,12 @@ label {
 
     <div id="dynamicContentContainer"></div>
     <br><br><br><br>
+
+</div>
+
+    <div class="waves" id="loadingDiv">
+        <img src="images/satellite.gif" alt="" >
+    </div>
   
     <div class="footer">
             <a href="/npw/" class="toa">
@@ -615,7 +655,7 @@ label {
                 </div>
             </a>
     </div>
-</div>
+
 
 </body>
 
@@ -662,6 +702,17 @@ label {
 
 function createDynamicContent() {
     var container = document.getElementById("dynamicContentContainer");
+    var loadingDiv = document.getElementById("loadingDiv");
+
+    // Εμφάνιση του loading div
+    loadingDiv.style.display = "block";
+    container.style.display = "none";
+
+    // Κρύψιμο του loading div μετά από 3 δευτερόλεπτα
+    setTimeout(function() {
+        loadingDiv.style.display = "none";
+        container.style.display = "block";
+    }, 4000);
 
     for (let i = 0; i < posts.length; i++) {
         var post = posts[i];
@@ -692,7 +743,6 @@ function createDynamicContent() {
                         </div>
                     </div>
                 </div>
-            
             </div>
         `;
 
@@ -703,20 +753,34 @@ function createDynamicContent() {
 createDynamicContent();
 
 function filterProjects(searchTerm) {
+    var trimmedSearchTerm = searchTerm.trim(); // Εφαρμογή της μεθόδου trim()
+
     var container = document.getElementById("dynamicContentContainer");
     container.innerHTML = ''; // Αδειάζουμε το περιεχόμενο του container
+
+    var loadingDiv = document.getElementById("loadingDiv");
+
+    // Εμφάνιση του loading div
+    loadingDiv.style.display = "block";
+    container.style.display = "none";
+
+    // Κρύψιμο του loading div μετά από 3 δευτερόλεπτα
+    setTimeout(function() {
+        loadingDiv.style.display = "none";
+        container.style.display = "block";
+    }, 2000);
 
     for (let i = 0; i < posts.length; i++) {
         var post = posts[i];
         // Έλεγχος αν το project πληροί τα κριτήρια αναζήτησης
         if (
-            post.Titlos.toLowerCase().includes(searchTerm.toLowerCase()) 
+            post.Titlos.toLowerCase().includes(trimmedSearchTerm.toLowerCase()) 
             ||
-            post.Keimeno.toLowerCase().includes(searchTerm.toLowerCase())
+            post.Keimeno.toLowerCase().includes(trimmedSearchTerm.toLowerCase())
             ||
-            post.Katigoria.toLowerCase().includes(searchTerm.toLowerCase())
+            post.Katigoria.toLowerCase().includes(trimmedSearchTerm.toLowerCase())
             ||
-            post.Sigrafeas.toLowerCase().includes(searchTerm.toLowerCase())
+            post.Sigrafeas.toLowerCase().includes(trimmedSearchTerm.toLowerCase())
             ) {
             var wrapDiv = document.createElement("div");
             wrapDiv.className = "wrap";
@@ -724,9 +788,11 @@ function filterProjects(searchTerm) {
             wrapDiv.innerHTML = `
                 <div class="blog-container">
                     <div class="blog-post">
-                        <div class="blog-post_img">
-                            <img src="${post.image}" alt="">
-                        </div>
+                        ${post.image ? `
+                            <div class="blog-post_img">
+                                <img src="${post.image}" alt="">
+                            </div>` : ''
+                        }
                         <div class="blog-post_info">
                             <div class="blog-post_date">
                                 <span>${post.Date}</span>
@@ -739,6 +805,7 @@ function filterProjects(searchTerm) {
                                 ${post.Link ? `<a href="${post.Link}" class="blog-post_cta">Link</a>` : ''}
                                 ${post.pdf ? `<a href="${post.pdf}" class="blog-post_cta">Pdf</a>` : ''}
                                 ${post.file ? `<a href="${post.file}" class="blog-post_cta">File</a>` : ''}
+                                ${post.video ? `<a href="${post.video}" class="blog-post_cta">Video</a>` : ''}
                             </div>
                         </div>
                     </div>
@@ -748,6 +815,7 @@ function filterProjects(searchTerm) {
         }
     }
 }
+
 
 // Προσθήκη event listener στη φόρμα αναζήτησης
 document.querySelector('form').addEventListener('submit', function(event) {
