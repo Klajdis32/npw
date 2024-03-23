@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/npw/images/logo.png" type="image/x-icon">
-    <title>Klajdi</title>
+    <title>Profil</title>
 
     <!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
 </head>
@@ -92,6 +92,7 @@
     }
 
     .footer {
+        z-index: 500;
         display: flex;
         position: fixed;
         bottom: 0;
@@ -154,6 +155,9 @@
     }
 
     .form-select {
+        color: white;
+        border: 1px solid lightgrey;
+        background-color: #333;
         cursor: pointer;
         padding: 5px 10px;
         border-radius: 5px;
@@ -180,6 +184,7 @@
     }
 
     .divmaximg {
+        z-index: 999;
         display: flex;
         position: fixed;
         top: 50%;
@@ -193,6 +198,7 @@
     }
 
     .overlay {
+        z-index: 900;
         position: fixed;
         top: 0;
         left: 0;
@@ -302,8 +308,8 @@
             display: flex;
             position: fixed;
             top: 30%;
-            left: 30%;
-            transform: translate(-20%, -10%);
+            left: 20%;
+            transform: translate(-12%, -10%);
         }
 
         .maxlogo {
@@ -338,18 +344,18 @@
     <img src="images/lightmode.png" alt="" class="mode" id="lightmode">
 </div>
 
+<div class="modal">
+    <div class="overlay"></div>
+    <div class="divmaximg">
+        <img src="images/profil.jpeg" alt="" class="maxlogo">
+    </div>
+</div>
+
 
 <div class="container">
     <div class="divlogo">
         <img src="images/profil.jpeg" alt="" class="tologoA"><br>
         <h3>Klajdi Cami</h3>
-    </div>
-
-    <div class="modal">
-        <div class="overlay"></div>
-        <div class="divmaximg">
-            <img src="images/profil.jpeg" alt="" class="maxlogo">
-        </div>
     </div>
 
     <div class="divkeimeno" id="en"> 
