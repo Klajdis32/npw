@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/npw/images/logo.png" type="image/x-icon">
-    <title>DaP</title>
+    <title>DAP</title>
 
     <style>
         body {
@@ -92,6 +92,7 @@
     }
 
     .footer {
+        z-index: 500;
         display: flex;
         position: fixed;
         bottom: 0;
@@ -186,6 +187,37 @@
 
     .toerror img{
         width: 100%;
+    }
+
+    .divmaximg {
+        z-index: 999;
+        display: flex;
+        position: fixed;
+        top: 33%;
+        left: 30%;
+        transform: translate(-20%, -30%);
+    }
+
+    .modal{
+        display: none;
+        overflow: hidden;
+    }
+
+    .overlay {
+        z-index: 900;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 1);
+    }
+
+    .NasaImg1 {
+        border: 2px solid lightgray;
+        margin-left: 0%;
+        width: 100%;
+        z-index: 999;
     }
 
 
@@ -313,6 +345,16 @@
     .loading img{
         width: 60%;
     }
+
+    .divmaximg {
+        z-index: 999;
+        display: flex;
+        position: fixed;
+        top: 40%;
+        left: 10%;
+        transform: translate(-5%, -40%);
+    }
+
     }
 
 
@@ -332,6 +374,13 @@
 
     <img src="images/darkmode.png" alt="" class="mode" id="darkmode">
     <img src="images/lightmode.png" alt="" class="mode" id="lightmode">
+</div>
+
+<div class="modal">
+    <div class="overlay"></div>
+    <div class="divmaximg">
+         <img id="apodImg1" class="NasaImg1" src="" alt="NASA APOD">
+    </div>
 </div>
 
 <div class="container">
@@ -358,66 +407,6 @@
                 <strong>Data provided by NASA Astronomy Picture of the Day (APOD)</strong> <a href="https://api.nasa.gov/planetary/apod" class="toa1">API</a></p>
                 <br><br><br><br><br><br>
             </div>
-
-            <script>
-                const loadingDiv = document.getElementById('loadingDiv');
-                const kinitoDiv = document.getElementById('kinitoDiv');
-                const errorDiv = document.getElementById('errorDiv');
-            
-                // Show loadingDiv
-                loadingDiv.style.display = 'block';
-            
-                // Delay the display of kinitoDiv by 4 seconds
-                setTimeout(() => {
-                    loadingDiv.style.display = 'none';
-                    kinitoDiv.style.display = 'block';
-                }, 4000);
-            
-                // Make a request to the APOD API
-                fetch('https://api.nasa.gov/planetary/apod?api_key=wNu2CW6MkRKeGOLgiAeLxoxVkLPGhQpj0KIqz0Tf')
-                .then(response => response.json())
-                .then(data => {
-                    // Check if the media type is image or shorts
-                    if (data.media_type === 'image') {
-                        // Create a new image element
-                        const image = document.createElement('img');
-                        image.src = data.url;
-                        image.alt = data.title;
-            
-                        // Set the image source and alt attribute of the existing image element
-                        const apodImg = document.getElementById('apodImg');
-                        apodImg.src = image.src;
-                        apodImg.alt = image.alt;
-            
-                    } else if (data.media_type === 'video') {
-                        // Create a new video element
-                        const video = document.createElement('iframe');
-                        video.width = '100%';
-                        video.height = '600';
-                        video.src = data.url;
-                        video.title = data.title;
-                        video.frameBorder = '0';
-                        video.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-                        video.allowFullscreen = true;
-            
-                        // Replace the image container with the video element
-                        const imageContainer = document.getElementById('imageContainer');
-                        imageContainer.innerHTML = '';
-                        imageContainer.appendChild(video);
-                    }
-            
-                    // Set the image caption and date
-                    document.getElementById('apodCaption').textContent = data.title;
-                    document.getElementById('apodDate').textContent = data.date;
-                    document.getElementById('apodExplanation').textContent = data.explanation;
-                })
-                .catch(error => {
-                    console.error('Error fetching APOD:', error);
-                    loadingDiv.style.display = 'none';
-                    kinitoDiv.style.display = 'none';
-                    errorDiv.style.display = 'block';
-                });
-            </script>
 
 </div>
 
@@ -453,44 +442,120 @@
 </body>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    // Έλεγχος αν υπάρχει αποθηκευμένη προτίμηση για dark mode
-    const isDarkMode = localStorage.getItem("darkModeEnabled") === "true";
 
-    // Εάν έχει αποθηκευτεί η προτίμηση για dark mode, εφαρμόζουμε το αντίστοιχο στυλ
-    if (isDarkMode) {
-        document.body.classList.add("dark-mode");
-        document.getElementById("darkmode").style.display = "none";
-        document.getElementById("lightmode").style.display = "block";
-    }
+const loadingDiv = document.getElementById('loadingDiv');
+                const kinitoDiv = document.getElementById('kinitoDiv');
+                const errorDiv = document.getElementById('errorDiv');
+            
+                // Show loadingDiv
+                loadingDiv.style.display = 'block';
+            
+                // Delay the display of kinitoDiv by 4 seconds
+                setTimeout(() => {
+                    loadingDiv.style.display = 'none';
+                    kinitoDiv.style.display = 'block';
+                }, 4000);
+            
+                // Make a request to the APOD API
+                fetch('https://api.nasa.gov/planetary/apod?api_key=wNu2CW6MkRKeGOLgiAeLxoxVkLPGhQpj0KIqz0Tf')
+                .then(response => response.json())
+                .then(data => {
+                    // Check if the media type is image or shorts
+                    if (data.media_type === 'image') {
+                        // Create a new image element
+                        const image = document.createElement('img');
+                        image.src = data.url;
+                        image.alt = data.title;
+            
+                        // Set the image source and alt attribute of the existing image element
+                        const apodImg = document.getElementById('apodImg');
+                        apodImg.src = image.src;
+                        apodImg.alt = image.alt;
 
-    // Προσθέτουμε ακροατές στα κουμπιά dark mode και light mode
-    document.getElementById("darkmode").addEventListener("click", function() {
-        enableDarkMode();
-    });
+                        const apodImg1 = document.getElementById('apodImg1');
+                        apodImg1.src = image.src;
+                        apodImg1.alt = image.alt;
+            
+                    } else if (data.media_type === 'video') {
+                        // Create a new video element
+                        const video = document.createElement('iframe');
+                        video.width = '100%';
+                        video.height = '600';
+                        video.src = data.url;
+                        video.title = data.title;
+                        video.frameBorder = '0';
+                        video.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                        video.allowFullscreen = true;
+            
+                        // Replace the image container with the video element
+                        const imageContainer = document.getElementById('imageContainer');
+                        imageContainer.innerHTML = '';
+                        imageContainer.appendChild(video);
+                    }
+            
+                    // Set the image caption and date
+                    document.getElementById('apodCaption').textContent = data.title;
+                    document.getElementById('apodDate').textContent = data.date;
+                    document.getElementById('apodExplanation').textContent = data.explanation;
+                })
+                .catch(error => {
+                    console.error('Error fetching APOD:', error);
+                    loadingDiv.style.display = 'none';
+                    kinitoDiv.style.display = 'none';
+                    errorDiv.style.display = 'block';
+                });
 
-    document.getElementById("lightmode").addEventListener("click", function() {
-        disableDarkMode();
-    });
+                document.getElementById("apodImg").addEventListener("click", function() {
+                    document.querySelector(".modal").style.display = "block";
+                });
 
-    // Συνάρτηση για ενεργοποίηση dark mode
-    function enableDarkMode() {
-        document.body.classList.add("dark-mode");
-        document.getElementById("darkmode").style.display = "none";
-        document.getElementById("lightmode").style.display = "block";
-        // Αποθηκεύουμε την επιλογή του χρήστη στο localStorage
-        localStorage.setItem("darkModeEnabled", "true");
-    }
+                document.addEventListener("click", function(event) {
+                    var modal = document.querySelector(".modal");
+                    var apodImg = document.getElementById("apodImg");
+                    if (event.target !== modal && event.target !== apodImg) {
+                        modal.style.display = "none";
+                    }
+                });
 
-    // Συνάρτηση για απενεργοποίηση dark mode
-    function disableDarkMode() {
-        document.body.classList.remove("dark-mode");
-        document.getElementById("darkmode").style.display = "block";
-        document.getElementById("lightmode").style.display = "none";
-        // Αφαιρούμε την αποθηκευμένη προτίμηση από το localStorage
-        localStorage.removeItem("darkModeEnabled");
-    }
-});
+
+                        document.addEventListener("DOMContentLoaded", function() {
+                    // Έλεγχος αν υπάρχει αποθηκευμένη προτίμηση για dark mode
+                    const isDarkMode = localStorage.getItem("darkModeEnabled") === "true";
+
+                    // Εάν έχει αποθηκευτεί η προτίμηση για dark mode, εφαρμόζουμε το αντίστοιχο στυλ
+                    if (isDarkMode) {
+                        document.body.classList.add("dark-mode");
+                        document.getElementById("darkmode").style.display = "none";
+                        document.getElementById("lightmode").style.display = "block";
+                    }
+
+                    // Προσθέτουμε ακροατές στα κουμπιά dark mode και light mode
+                    document.getElementById("darkmode").addEventListener("click", function() {
+                        enableDarkMode();
+                    });
+
+                    document.getElementById("lightmode").addEventListener("click", function() {
+                        disableDarkMode();
+                    });
+
+                    // Συνάρτηση για ενεργοποίηση dark mode
+                    function enableDarkMode() {
+                        document.body.classList.add("dark-mode");
+                        document.getElementById("darkmode").style.display = "none";
+                        document.getElementById("lightmode").style.display = "block";
+                        // Αποθηκεύουμε την επιλογή του χρήστη στο localStorage
+                        localStorage.setItem("darkModeEnabled", "true");
+                    }
+
+                    // Συνάρτηση για απενεργοποίηση dark mode
+                    function disableDarkMode() {
+                        document.body.classList.remove("dark-mode");
+                        document.getElementById("darkmode").style.display = "block";
+                        document.getElementById("lightmode").style.display = "none";
+                        // Αφαιρούμε την αποθηκευμένη προτίμηση από το localStorage
+                        localStorage.removeItem("darkModeEnabled");
+                    }
+                });
 
     </script>
 
