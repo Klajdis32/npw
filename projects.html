@@ -244,14 +244,14 @@ label {
 }
 
 .blog-post_info {
-    padding: 30px;
+    padding: 15px;
 }
 
 .blog-post_img {
     min-width: 30%;
     max-width: 30%;
     height: 30%;
-    transform: translateX(-3%);
+    padding: 20px;
     position: relative;
 }
 
@@ -331,6 +331,7 @@ label {
             max-width: 80rem;
         }
         .blog-post_img {
+            margin-top: 15px;
             min-width: 30rem;
             max-width: 30rem;
         }
@@ -355,7 +356,7 @@ label {
         .blog-post_img {
             min-width: 80%;
             max-width: 80%;
-            transform: translate(0, -1rem);
+            
         }
     
         .blog-post_date span {
@@ -638,9 +639,11 @@ function createDynamicContent() {
         wrapDiv.innerHTML = `
             <div class="blog-container">
                 <div class="blog-post">
-                    <div class="blog-post_img">
-                        <img src="${post.image}" alt="">
-                    </div>
+                    ${post.image ? `
+                        <div class="blog-post_img">
+                            <img src="${post.image}" alt="">
+                        </div>` : ''
+                    }
                     <div class="blog-post_info">
                         <div class="blog-post_date">
                             <span>${post.Date}</span>
@@ -653,6 +656,7 @@ function createDynamicContent() {
                             ${post.Link ? `<a href="${post.Link}" class="blog-post_cta">Link</a>` : ''}
                             ${post.pdf ? `<a href="${post.pdf}" class="blog-post_cta">Pdf</a>` : ''}
                             ${post.file ? `<a href="${post.file}" class="blog-post_cta">File</a>` : ''}
+                            ${post.video ? `<a href="${post.video}" class="blog-post_cta">Video</a>` : ''}
                         </div>
                     </div>
                 </div>
