@@ -8,7 +8,7 @@
 
     <script src="/npw/ProjectsDB.js"></script>
 
-    <!-- <script src="ProjectsDB.js"></script> -->
+    <script src="ProjectsDB.js"></script>
 
     <style>
         body {
@@ -326,6 +326,22 @@ label {
         font-weight: 550;
     }
 
+    .arrow {
+        position: fixed;
+        bottom: 100px; 
+        right: -25%;
+        z-index: 9999;
+    }
+
+    .arrow img {
+        cursor: pointer;
+        width: 10%;
+    }
+
+    #uparrow {
+        display: none;
+    }
+
     @media screen and (max-width: 1068px) {
         .blog-post {
             max-width: 80rem;
@@ -525,6 +541,18 @@ label {
             font-size: 25px;
             font-weight: 550;
         }
+
+        .arrow {
+            position: fixed;
+            bottom: 100px; 
+            right: -90%;
+            z-index: 9999;
+        }
+
+        .arrow img {
+            cursor: pointer;
+            width: 10%;
+        }
     }
 
     </style>
@@ -543,6 +571,11 @@ label {
     <img src="images/lightmode.png" alt="" class="mode" id="lightmode">
 </div>
 
+<div class="arrow" id="uparrow">
+    <img src="images/up-arrow.png" alt="" >
+</div>
+
+
 <div class="container">
 
     <br><p class="topstoproj">Projects</p><br>
@@ -555,7 +588,6 @@ label {
 
     <div id="dynamicContentContainer"></div>
     <br><br><br><br>
-
   
     <div class="footer">
             <a href="/npw/" class="toa">
@@ -724,6 +756,37 @@ document.querySelector('form').addEventListener('submit', function(event) {
     var searchTerm = document.getElementById('search').value;
     filterProjects(searchTerm); // Φιλτράρισμα των projects βάσει της αναζήτησης
 });
+
+// Περιμένουμε μέχρι να φορτωθεί ολόκληρη η σελίδα
+window.onload = function() {
+    var arrow = document.getElementById('uparrow');
+
+    // Εμφάνιση/απόκρυψη του κουμπιού ανάλογα με τη θέση του χρήστη
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            arrow.style.display = 'block';
+        } else {
+            arrow.style.display = 'none';
+        }
+    };
+
+    // Ομαλή κύλιση προς την κορυφή της σελίδας όταν πατηθεί το κουμπί
+    arrow.onclick = function() {
+        scrollToTop(500); // 500 milliseconds για την ομαλή κύλιση
+    };
+
+    // Συνάρτηση για ομαλή κύλιση προς την κορυφή της σελίδας
+    function scrollToTop(scrollDuration) {
+        var scrollStep = -window.scrollY / (scrollDuration / 15),
+            scrollInterval = setInterval(function(){
+            if ( window.scrollY != 0 ) {
+                window.scrollBy( 0, scrollStep );
+            }
+            else clearInterval(scrollInterval); 
+        },15);
+    }
+};
+
     </script>
 
 </html>
