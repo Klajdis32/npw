@@ -19,7 +19,7 @@ const posts = [
         Katigoria: "Electronics", 
         Keimeno: "Η εργαστηριακή άσκηση αυτή αποτελεί ένα σημαντικό βήμα προς την πρακτική εξοικείωση και κατανόηση των βασικών αρχών συντονισμού ηλεκτρικών κυκλωμάτων. Μέσα από την εφαρμογή της θεωρίας σε πραγματικά πειραματικά σενάρια, εξετάσαμε τον τρόπο λειτουργίας ενός κυκλώματος RLC κατά τη διάρκεια του συντονισμού. Τα αποτελέσματα επιβεβαιώνουν τη σημασία της συνδυασμένης προσέγγισης θεωρητικής γνώσης και πρακτικής εφαρμογής, παρέχοντας μια ολοκληρωμένη προσέγγιση για την αντιμετώπιση πρακτικών προβλημάτων στον τομέα της ηλεκτρονικής. Με αυτό τον τρόπο, η εργασία αυτή συμβάλλει στην εμβάθυνση της κατανόησης του συντονισμού σε κυκλώματα RLC, ενισχύοντας παράλληλα τις δεξιότητές μας στον ευρύτερο τομέα της ηλεκτρονικής.",
         Link: "" ,
-        pdf: "/npw/attachments/pdfs/Συντονισμός Σειράς – Παράλληλος.pdf",
+        pdf: "/attachments/pdfs/Συντονισμός Σειράς – Παράλληλος.pdf",
         file: "",
         video: ""
     },
@@ -31,7 +31,7 @@ const posts = [
         Katigoria: "Electronics", 
         Keimeno: "Η εργαστηριακή άσκηση αυτή αποτελεί μια σημαντική διαδικασία που ενισχύει την κατανόηση των βασικών αρχών φίλτρων αποκοπής συχνοτήτων. Μέσω της πρακτικής εφαρμογής της θεωρίας σε πειραματικό πλαίσιο, ερευνήσαμε τις λειτουργίες του υψηλοπερατού και χαμηλοπερατού φίλτρου, καθιστώντας σαφές πώς επηρεάζουν τη διαμόρφωση σημάτων. Η επιτυχημένη ολοκλήρωση αυτής της άσκησης ενδυναμώνει τις γνώσεις μας και μας παρασύρει σε ένα επίπεδο εξει δίκευσης, εφοδιάζοντάς μας με τα απαραίτητα εφόδια για την καλύτερη κατανόηση και εφαρμογή των αρχών της ηλεκτρονικής στον τομέα των επικοινωνιών.",
         Link: "" ,
-        pdf: "/npw/attachments/pdfs/Συχνοτική Απόκριση Φίλτρων.pdf",
+        pdf: "/attachments/pdfs/Συχνοτική Απόκριση Φίλτρων.pdf",
         file: "",
         video: ""
     },
@@ -43,7 +43,7 @@ const posts = [
         Katigoria: "Electronics", 
         Keimeno: "Η εργαστηριακή άσκηση αυτή αποτελεί μια σημαντική διαδικασία που ενισχύει την κατανόηση των βασικών αρχών δύο ουσιαστικών θεωρημάτων: των τετραπόλων και των κυκλωμάτων διαφόρισης . Μέσω της πρακτικής εφαρμογής της θεωρίας σε πειραματικό πλαίσιο, χρησιμοποιώντας συγκεκριμένα δεδομένα που αντλήθηκαν από τη δική μας έρευνα, προωθούμε την κατανόηση των αρχών πίσω από αυτά τα δύο θεμελιώδη θεωρήματα. Η επιτυχημένη ολοκλήρωση αυτής της ά σκησης ενδυναμώνει τις γνώσεις μας και μας παρασύρει σε ένα επίπεδο εξειδίκευσ ης, εφοδιάζοντάς μας με τα απαραίτητα εφόδια για αντιμετώπιση προχωρημένων ζητημάτων που αφορούν αυτούς τους σημαντικούς τομείς της ηλεκτρολογίας.",
         Link: "" ,
-        pdf: "/npw/attachments/pdfs/Τετράπολα - Κυκλώματα Διαφόρισης .pdf",
+        pdf: "/attachments/pdfs/Τετράπολα - Κυκλώματα Διαφόρισης .pdf",
         file: "",
         video: ""
     },
@@ -55,7 +55,7 @@ const posts = [
         Katigoria: "Electronics", 
         Keimeno: "Η εργαστηριακή άσκηση αυτή αποτελεί μια σημαντική διαδικασία που ενισχύει την κατανόηση των βασικών αρχών της μέγιστης μεταφοράς ισχύος στον τομέα της ηλεκτρολογίας και της ενέργειας. Κατά τη διάρκεια αυτής της άσκησης , εφαρμόσαμε τη θεωρία που μελετήσαμε σε ένα πρακτικό πλαίσιο, χρησιμοποιώντας διαγράμματα και πειραματικές μετρήσεις. Αυτό μας επέτρεψε να επαληθεύσουμε την ακρίβεια της θεωρίας και να εξοικειωθούμε με τη διαδικασία ανάλυσης και επίλυσης πραγματικών προβλημάτων στον τομέα αυτόν. Η επιτυχής ολοκλήρωση αυτής της άσκησης ενίσχυσε τις γνώσεις μας και τις δεξιότητές μας, προετοιμάζοντάς μας για πιο προηγμένες εφαρμογές και μελλοντικές προκλήσεις στον χώρο της ηλεκτρολογίας και της ενέργειας.",
         Link: "" ,
-        pdf: "/npw/attachments/pdfs/Θεώρημα Μέγιστης Μεταφοράς Ισχύος .pdf",
+        pdf: "/attachments/pdfs/Θεώρημα Μέγιστης Μεταφοράς Ισχύος .pdf",
         file: "",
         video: ""
     },
@@ -67,7 +67,7 @@ const posts = [
         Katigoria: "Electronics", 
         Keimeno: "Η παρούσα εργασία αφορά την εφαρμογή και την αξιολόγηση των θεωρημάτων των Thevenin και Norton στην ανάλυση ηλεκτρικών κυκλωμάτων. Με σκοπό την πληρέστερη κατανόηση της λειτουργίας και την ευκολότερη ανάλυση περίπλοκων κυκλωμάτων, υιοθετήθηκε μια προσέγγιση όπου αναλύθηκαν διάφορα κυκλώματα μέσω της απλοποίησης σε ισοδύναμες πηγές. Η μεθοδολογία περιλάμβανε τόσο θεωρητικούς υπολογισμούς όσο και πρακτική εφαρμογή σε εργαστηριακό περιβάλλον, με τα αποτελέσματα να αντανακλούν υψηλή συσχέτιση μεταξύ θεωρίας και πράξης. Η εργασία επιβεβαιώνει την πρακτική χρησιμότητα των θεωρημάτων στην αποδοτική ανάλυση και σχεδίαση ηλεκτρικών κυκλωμάτων.",
         Link: "" ,
-        pdf: "/npw/attachments/pdfs/Θεώρημα Thevenin - Norton.pdf",
+        pdf: "/attachments/pdfs/Θεώρημα Thevenin - Norton.pdf",
         file: "",
         video: ""
     },
@@ -79,7 +79,7 @@ const posts = [
         Katigoria: "Electronics", 
         Keimeno: "Στην παρακάτω εργαστηριακή άσκηση εστιάσαμε στην εμβάθυνση των γνώσεων μας σχετικά με το εναλλασσόμενο ρεύμα. Μέσα από πολλαπλά πειράματα, επικεντρωθήκαμε στις θεωρητικές αρχές που διέπουν το εναλλασσόμενο ρεύμα και προχωρήσαμε σε ακριβείς μετρήσεις, συμπεριλαμβανομένων των μετρήσεων σε εναλλασσόμενα κυκλώματα. Ο στόχος μας ήταν η πλήρης κατανόηση των πρακτικών και θεωρητικών πτυχών του θέματος, βελτιώνοντας έτσι τις γνώσεις μας και τις δεξιότητές μας στον τομέα του εναλλασσόμενου ρεύματος.",
         Link: "" ,
-        pdf: "/npw/attachments/pdfs/Μέτρηση Τάσεων Mε Παλμογράφο.pdf",
+        pdf: "/attachments/pdfs/Μέτρηση Τάσεων Mε Παλμογράφο.pdf",
         file: "",
         video: ""
     },
@@ -91,7 +91,7 @@ const posts = [
         Katigoria: "Electronics", 
         Keimeno: "Η εργαστηριακή άσκηση αυτή επικεντρώθηκε κυρίως στην θεωρητική αλλά και πειραματική εισαγωγή στοκύκλωμα γέφυρας (γνωστό ως γέφυρα Wheatstone ), με στόχο τη μελέτη του συγκεκριμένου κυκλώματος. Κατά τη διάρκεια της άσκησης , πραγματοποιήθηκαν πειραματικές μετρήσεις πάνω στο κύκλωμα αυτό. Οιπειραματικές τιμές που καταγράφηκαν συγκρίθηκαν με τις θεωρητικές τιμές που υπολογίστηκαν, αναδεικνύοντας την απόκλιση μεταξύ τους. Ενδιαφέρον παρουσιάζει το γεγονός ότι οι πειραματικές και θεωρητικές τιμές εμφάνισαν εξαιρετικά μικρή απόκλιση μεταξύ τους, καθιστώντας την μελέτη αυτή αξιόπιστη και ακριβή. Αυτή η σύγκριση αποτελεί σημαντικό εύρημα, αποδεικνύοντας την ακρίβεια των πειραματικών αποτελεσμάτων και ενισχύοντας την κατανόησή μας για τη λειτουργία της γέφυρας Wheatstone.",
         Link: "" ,
-        pdf: "/npw/attachments/pdfs/Κύκλωμα Γέφυρας – Μετασχηματισμοί Δ ↔ Υ.pdf",
+        pdf: "/attachments/pdfs/Κύκλωμα Γέφυρας – Μετασχηματισμοί Δ ↔ Υ.pdf",
         file: "",
         video: ""
     },
@@ -103,12 +103,12 @@ const posts = [
         Katigoria: "Electronics", 
         Keimeno: "Στην εργαστηριακή άσκηση αυτή, ερευνήσαμε ένα κύκλωμα διαίρεσης τάσης με στόχο ναεξετάσουμε τα φαινόμενα που επηρεάζουν τις πειραματικές μας μετρήσεις. Αναλύσαμε την επίδραση του φαινομένου επίδρασης φορτιού στις πειραματικές μέτρησης και εξετάσαμε τη σημασία της ακρίβειας στις πειραματικές διαδικασίες. Με τη σύγκριση των μετρήσεων σε διάφορες συνθήκες, ανακαλύψαμε πώς οι ανθρώπινες παρεμβάσεις επηρεάζουν επίσης τα αποτελέσματα. Αυτή η εμπειρία μας βοήθησε να κατανοήσουμε βαθύτερα τη σύνθετη σχέση μεταξύ των εξωτερικών παραγόντων και των πειραματικών αποτελεσμάτων μας, ενισχύοντας τη δεξιότητά μας στην ανάλυση και τη βελτίωση των μετρήσεών μας στο μέλλον.",
         Link: "" ,
-        pdf: "/npw/attachments/pdfs/Νόμοι Kirchhoff - Διαιρέτης Τάσης.pdf",
+        pdf: "/attachments/pdfs/Νόμοι Kirchhoff - Διαιρέτης Τάσης.pdf",
         file: "",
         video: ""
     },
     {
-        image: "/npw/ProjectImages/game.png", 
+        image: "/ProjectImages/game.png", 
         Titlos: "Rocket Game With Python", 
         Sigrafeas: "By me", 
         Date: "24/07/2023",
@@ -120,7 +120,7 @@ const posts = [
         video: ""
     },
     {
-        image: "/npw/ProjectImages/skyline.png", 
+        image: "/ProjectImages/skyline.png", 
         Titlos: "Skyline Problem Algorithm With Java", 
         Sigrafeas: "<a href='https://tsami.gr/'>Kristi Cami</a>", 
         Date: "17/07/2023",
@@ -132,43 +132,43 @@ const posts = [
         video: ""
     },
     {
-        image: "/npw/ProjectImages/MaPassImg.png", 
+        image: "/ProjectImages/MaPassImg.png", 
         Titlos: "Android App Manage Passwords (MaPass)", 
         Sigrafeas: "<a href='https://tsami.gr/'>Kristi Cami</a>", 
         Date: "13/07/2023",
         Katigoria: "Programming", 
         Keimeno: "In this project, our aim was to create a password management application for Android called MaPass. In today's digital world, the need for strong passwords is essential to protect our personal and sensitive information. However, managing these passwords can be quite challenging. MaPass is an innovative password management application that we have developed specifically for Android, combining security and convenience into one functional tool. With MaPass, you can securely store and organize all your passwords in one place, ensuring easy access whenever you need them.",
         Link: "https://github.com/KristiCami/PasswordManager" ,
-        pdf: "/npw/attachments/pdfs/MaPass.pdf",
+        pdf: "/attachments/pdfs/MaPass.pdf",
         file: "",
-        video: "/npw/attachments/videos/video.mp4"
+        video: "/attachments/videos/video.mp4"
     },
     {
-        image: "/npw/ProjectImages/ear.jpg", 
+        image: "/ProjectImages/ear.jpg", 
         Titlos: "Ultrasound", 
         Sigrafeas: "By me", 
         Date: "14/06/2023",
         Katigoria: "Physics", 
         Keimeno: "This project delves into the fundamental acoustic phenomena of wave propagation and reflection, aiming to determine the frequency and wavelength of sound waves through the use of an appropriate ultrasound setup. Through extensive experimentation, this study explores the behavior of sound waves and their interaction , with a specific focus on reflection phenomena. By designing and implementing a well-suited ultrasound arrangement, we conducted experiments to accurately measure and analyze the frequency and wavelength of these waves.",
         Link: "" ,
-        pdf: "/npw/attachments/pdfs/Ultrasound.pdf",
+        pdf: "/attachments/pdfs/Ultrasound.pdf",
         file: "",
         video: ""
     },
     {
-        image: "/npw/ProjectImages/palmografos.jpeg", 
+        image: "/ProjectImages/palmografos.jpeg", 
         Titlos: "Oscilloscope", 
         Sigrafeas: "By me", 
         Date: "01/06/2023",
         Katigoria: "Physics", 
         Keimeno: "The proposed project consists of three distinct experiments aimed at precisely measuring the amplitude, frequency, and phase of sinusoidal signals. The equipment used to implement this project includes a dual-beam oscilloscope and a frequency generator. In simple terms, through the frequency generator, which we connect to the oscilloscope using a cable, we send various signals of specific or unknown frequency towards the oscilloscope. We study each of these signals via the screen contained in the oscilloscope, with the aim of obtaining experimental data. This experimental data, through mathematical analysis, will lead us to the unknown values of amplitude, frequency, and phase of the sinusoidal signals that we aim to measure in each experiment. This methodical approach provides a hands-on experience of the fundamental principles of signal processing and waveform analysis, offering significant insights into the nature of sinusoidal signals.",
         Link: "" ,
-        pdf: "/npw/attachments/pdfs/oscilloscope.pdf",
+        pdf: "/attachments/pdfs/oscilloscope.pdf",
         file: "",
         video: ""
     },
     {
-        image: "/npw/ProjectImages/(ALU).png", 
+        image: "/ProjectImages/(ALU).png", 
         Titlos: "Arithmetic logic unit (Alu)", 
         Sigrafeas: "<a href='https://tsami.gr/'>Kristi Cami</a>", 
         Date: "16/05/2023",
@@ -176,23 +176,23 @@ const posts = [
         Keimeno: "In this project, our objective was to design and implement an Arithmetic Logic Unit (ALU) using Logisim, a digital logic simulator. The ALU served as a crucial component responsible for performing arithmetic and logical operations. We started by designing the ALU's architecture, considering the necessary subunits such as adders, multipliers, dividers, and logic gates. Through careful interconnection of these subunits, we created a functional ALU. We conducted extensive simulations to test its accuracy and reliability, verifying that it produced correct results for various test cases. Throughout the project, we encountered challenges and developed problem-solving skills while gaining a deeper understanding of digital logic and circuit design. To further demonstrate our work, we have made the ALU design file available for review and testing. You can download and run it on Logisim to see our ALU in action.",
         Link: "" ,
         pdf: "",
-        file: "/npw/attachments/files/ALU.zip",
+        file: "/attachments/files/ALU.zip",
         video: ""
     },
     {
-        image: "/npw/ProjectImages/thermometer1920.jpg", 
+        image: "/ProjectImages/thermometer1920.jpg", 
         Titlos: "Specific heat of materials", 
         Sigrafeas: "By me", 
         Date: "13/05/2023",
         Katigoria: "Physics", 
         Keimeno: "This project explores the fascinating field of thermodynamics through a series of experiments, aiming to determine the heat capacities of various substances such as distilled water, glycerin, and lead. By combining practical experimentation with mathematical analysis, we are delving into the fundamental principles that govern the transfer of heat energy. Our experiments involve heating these substances under controlled conditions and carefully measuring the amount of heat absorbed. Through the application of mathematical concepts, we can then calculate their specific heat capacities. This project provides invaluable insights into the complex interplay of heat, energy, and matter, offering a hands-on understanding of the principles of thermodynamics.",
         Link: "" ,
-        pdf: "/npw/attachments/pdfs/SpecificHeatOfMaterials.pdf",
+        pdf: "/attachments/pdfs/SpecificHeatOfMaterials.pdf",
         file: "",
         video: ""
     },
     {
-        image: "/npw/ProjectImages/blue-ge.jpg", 
+        image: "/ProjectImages/blue-ge.jpg", 
         Titlos: "Rotated Cube", 
         Sigrafeas: "By me", 
         Date: "13/05/2023",
@@ -204,19 +204,19 @@ const posts = [
         video: ""
     },
     {
-        image: "/npw/ProjectImages/ohmmeter-1920.jpg", 
+        image: "/ProjectImages/ohmmeter-1920.jpg", 
         Titlos: "Useful electrical circuits", 
         Sigrafeas: "By me", 
         Date: "07/05/2023",
         Katigoria: "Electronics", 
         Keimeno: "The electrical circuits presented in this project are very useful, specifically the internal resistance of an ammeter and a voltmeter is measured, a procedure that can be followed by anyone who wants to measure the internal resistance of the ammeter or voltmeter used in their circuit. Furthermore, through a new circuit, we extend the measurement range of an ammeter, while at the end we show how an unknown resistance can be measured.",
         Link: "" ,
-        pdf: "/npw/attachments/pdfs/UsefulElectricalCircuits.pdf",
+        pdf: "/attachments/pdfs/UsefulElectricalCircuits.pdf",
         file: "",
         video: ""
     },
     {
-        image: "/npw/ProjectImages/Fractal.png", 
+        image: "/ProjectImages/Fractal.png", 
         Titlos: "Pentagonal Fractal With C", 
         Sigrafeas: "By me", 
         Date: "06/05/2023",
@@ -228,19 +228,19 @@ const posts = [
         video: ""
     },
     {
-        image: "/npw/ProjectImages/Aero.jpg", 
+        image: "/ProjectImages/Aero.jpg", 
         Titlos: "Simulation of linear motion", 
         Sigrafeas: "By me", 
         Date: "15/04/2023",
         Katigoria: "Physics", 
         Keimeno: "This project delves into the realm of physics, exploring the experimental representation of linear, smooth, and accelerated body motion. Our aim is to corroborate the mathematical equations that describe these motions through real-world experimentation. The process utilizes a unique setup - the layout of an air route, supported by a computer for data recording and analysis. The mathematical validity is ensured by employing the method of Ordinary Least Squares.",
         Link: "" ,
-        pdf: "/npw/attachments/pdfs/SimulationOfLinearMotion.pdf",
+        pdf: "/attachments/pdfs/SimulationOfLinearMotion.pdf",
         file: "",
         video: ""
     },
     {
-        image: "/npw/ProjectImages/arduino.jpg", 
+        image: "/ProjectImages/arduino.jpg", 
         Titlos: "Simple Arduino Project", 
         Sigrafeas: "By me", 
         Date: "13/04/2023",
