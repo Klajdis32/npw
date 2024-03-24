@@ -8,7 +8,7 @@
 
     <script src="/npw/ProjectsDB.js"></script>
 
-    <!-- <script src="ProjectsDB.js"></script> -->
+    <script src="ProjectsDB.js"></script>
 
     <style>
         body {
@@ -627,7 +627,7 @@ label {
 </div>
 
     <div class="waves" id="loadingDiv">
-        <img src="images/satellite.gif" alt="" >
+        <img src="images/1.gif" alt="" >
     </div>
   
     <div class="footer">
@@ -709,12 +709,6 @@ function createDynamicContent() {
     loadingDiv.style.display = "block";
     container.style.display = "none";
 
-    // Κρύψιμο του loading div μετά από 3 δευτερόλεπτα
-    setTimeout(function() {
-        loadingDiv.style.display = "none";
-        container.style.display = "block";
-    }, 4000);
-
     for (let i = 0; i < posts.length; i++) {
         var post = posts[i];
         var wrapDiv = document.createElement("div");
@@ -747,9 +741,16 @@ function createDynamicContent() {
             </div>
         `;
 
+        setTimeout(function() {
+            loadingDiv.style.display = "none";
+            container.style.display = "block";
+        }, 3000);
+
         container.appendChild(wrapDiv);
     }
 }
+
+
 
 createDynamicContent();
 
@@ -764,12 +765,6 @@ function filterProjects(searchTerm) {
     // Εμφάνιση του loading div
     loadingDiv.style.display = "block";
     container.style.display = "none";
-
-    // Κρύψιμο του loading div μετά από 3 δευτερόλεπτα
-    setTimeout(function() {
-        loadingDiv.style.display = "none";
-        container.style.display = "block";
-    }, 2000);
 
     for (let i = 0; i < posts.length; i++) {
         var post = posts[i];
@@ -812,6 +807,12 @@ function filterProjects(searchTerm) {
                     </div>
                 </div>
             `;
+
+            setTimeout(function() {
+                loadingDiv.style.display = "none";
+                container.style.display = "block";
+            }, 2000);
+
             container.appendChild(wrapDiv);
         }
     }
