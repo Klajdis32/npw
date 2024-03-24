@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+    <title>Books</title>
+
+    <link rel="stylesheet" type="text/css" href="books.css">
+
+    <script src="/BooksDB.js"></script>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="left-item">
+        <a href="/" style="text-decoration: none;">
+            <p>Klajdi Cami</p>
+        </a>
+    </div>
+
+    <img src="images/darkmode.png" alt="" class="mode" id="darkmode">
+    <img src="images/lightmode.png" alt="" class="mode" id="lightmode">
+</div>
+
+
+<div class="container">
+    <br>
+    <div style="text-align: center;"><h2>Books i have read:</h2></div>
+    <br>
+    <form onsubmit="event.preventDefault();" role="search">
+        <input id="search" type="search" placeholder="Αναζήτηση..." autofocus required />
+        <button type="submit">Go</button>    
+    </form>
+    <br><br>
+
+    <div id="dynamicContentContainer"></div>
+
+
+    <div class="waves" id="loadingDiv">
+        <img src="images/satellite.gif" alt="" >
+    </div>
+
+    <br><br><br><br><br><br>
+
+    
+    <div class="footer">
+            <a href="/" class="toa">
+                <div class="todiv">
+                        <img src="images/user12.png" alt=""><br>
+                        <span>Profil</span>
+                </div>
+            </a>
+            <a href="/projects.html" class="toa">
+                <div class="todiv">
+                        <img src="images/planning.png" alt=""><br>
+                        <span>Projects</span>
+                </div>
+            </a>
+            <a href="/books.html" class="toa">
+                <div class="todiv">
+                        <img src="images/book.png" alt=""><br>
+                        <span id="toepi"><strong>Books</strong></span>
+                </div>
+            </a>
+            <a href="/contact.html" class="toa">
+                <div class="todiv">
+                        <img src="images/send1.png" alt=""><br>
+                        <span>Contact</span>
+                </div>
+            </a>
+            <a href="/dap.html" class="toa">
+                <div class="todiv">
+                        <img src="images/astronomy.png" alt=""><br>
+                        <span>DAP</span>
+                </div>
+            </a>
+    </div>
+
+</body>
+
+<script>
+
+    function createDynamicContent() {
+        var container = document.getElementById("dynamicContentContainer");
+        var loadingDiv = document.getElementById("loadingDiv");
+
+        // Εμφάνιση του loading div
+        loadingDiv.style.display = "block";
+        container.style.display = "none";
+
+        for (let i = 0; i < books.length; i++) {
+            var post = books[i];
+            var wrapDiv = document.createElement("div");
+            wrapDiv.className = "wrap";
+
+            wrapDiv.innerHTML = `
+                <div class="todivtoybiblioy" id="${post.id}">
+                    <div class="left-item1">
+                        <p>${post.Titlos}</p>
+                    </div>
+
+                    <p class="bathmologia">${post.bathmos}/10</p>
+                </div>
+
+                <div class="toinfo">
+                    <br>
+                    <p><strong>Συμπέρασμα: </strong>${post.simperasma}</p>
+                    <p><strong>Σχόλιο: </strong>${post.sxolio}</p>
+                </div>
+                <br>
+            `;
+
+            container.appendChild(wrapDiv);
+        }
+
+        setTimeout(function() {
+                loadingDiv.style.display = "none";
+                container.style.display = "block";
+        }, 3000);
+    }
+
+    createDynamicContent();
+
+function filterBooks(searchTerm) {
+    var trimmedSearchTerm = searchTerm.trim(); // Εφαρμογή της μεθόδου trim()
+
+    var container = document.getElementById("dynamicContentContainer");
+    container.innerHTML = ''; // Αδειάζουμε το περιεχόμενο του container
+
+    var loadingDiv = document.getElementById("loadingDiv");
+
+    // Εμφάνιση του loading div
+    loadingDiv.style.display = "block";
+    container.style.display = "none";
+
+    
+    setTimeout(function() {
+        loadingDiv.style.display = "none";
+        container.style.display = "block";
+    }, 1500);
+
+    var foundResults = false; // Αρχικά θέτουμε τη μεταβλητή foundResults σε false
+
+    for (let i = 0; i < books.length; i++) {
+        var post = books[i];
+        // Έλεγχος αν το project πληροί τα κριτήρια αναζήτησης
+        if (
+            post.Titlos.toLowerCase().includes(trimmedSearchTerm.toLowerCase()) 
+            ||
+            post.bathmos.toLowerCase().includes(trimmedSearchTerm.toLowerCase())
+            ) {
+            var wrapDiv = document.createElement("div");
+            wrapDiv.className = "wrap";
+
+            wrapDiv.innerHTML = `
+            <div class="todivtoybiblioy" id="${post.id}">
+                    <div class="left-item1">
+                        <p>${post.Titlos}</p>
+                    </div>
+
+                    <p class="bathmologia">${post.bathmos}/10</p>
+                </div>
+
+                <div class="toinfo">
+                    <br>
+                    <p><strong>Συμπέρασμα: </strong>${post.simperasma}</p>
+                    <p><strong>Σχόλιο: </strong>${post.sxolio}</p>
+                </div>
+                <br>
+            `;
+
+            container.appendChild(wrapDiv);
+            foundResults = true; 
+        }
+    }
+
+
+    if (!foundResults) {
+        var notFoundMessage = document.createElement("p");
+        notFoundMessage.className = "notFoundMessage"; 
+        notFoundMessage.innerHTML =  `<p>Δεν βρέθηκε κανένα βιβλίο που να περιέχει τη λέξη: <strong>"${trimmedSearchTerm}"</strong></p>`;
+        container.appendChild(notFoundMessage);
+    }
+
+}
+
+// Προσθήκη event listener στη φόρμα αναζήτησης
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Αποτροπή προεπιλεγμένης συμπεριφοράς της φόρμας
+
+    var searchTerm = document.getElementById('search').value;
+    filterBooks(searchTerm); // Φιλτράρισμα των projects βάσει της αναζήτησης
+});
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+    // Έλεγχος αν υπάρχει αποθηκευμένη προτίμηση για dark mode
+    const isDarkMode = localStorage.getItem("darkModeEnabled") === "true";
+
+    // Εάν έχει αποθηκευτεί η προτίμηση για dark mode, εφαρμόζουμε το αντίστοιχο στυλ
+    if (isDarkMode) {
+        document.body.classList.add("dark-mode");
+        document.getElementById("darkmode").style.display = "none";
+        document.getElementById("lightmode").style.display = "block";
+    }
+
+    // Προσθέτουμε ακροατές στα κουμπιά dark mode και light mode
+    document.getElementById("darkmode").addEventListener("click", function() {
+        enableDarkMode();
+    });
+
+    document.getElementById("lightmode").addEventListener("click", function() {
+        disableDarkMode();
+    });
+
+    // Συνάρτηση για ενεργοποίηση dark mode
+    function enableDarkMode() {
+        document.body.classList.add("dark-mode");
+        document.getElementById("darkmode").style.display = "none";
+        document.getElementById("lightmode").style.display = "block";
+        // Αποθηκεύουμε την επιλογή του χρήστη στο localStorage
+        localStorage.setItem("darkModeEnabled", "true");
+    }
+
+    // Συνάρτηση για απενεργοποίηση dark mode
+    function disableDarkMode() {
+        document.body.classList.remove("dark-mode");
+        document.getElementById("darkmode").style.display = "block";
+        document.getElementById("lightmode").style.display = "none";
+        // Αφαιρούμε την αποθηκευμένη προτίμηση από το localStorage
+        localStorage.removeItem("darkModeEnabled");
+    }
+});
+
+</script>
+
+</html>

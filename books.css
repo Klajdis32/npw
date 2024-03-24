@@ -1,0 +1,526 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+
+::-webkit-scrollbar {
+        width: 15px; 
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #333; /* Χρώμα φόντου του track */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #555; /* Χρώμα του thumb */
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #666; /* Χρώμα του thumb κατά το hover */
+    }
+
+.dark-mode {
+        background-color: #282828; /* Σκοτεινό φόντο */
+        color: #ffffff; /* Λευκό χρώμα κειμένου */
+    
+        .footer {
+            background-color: #333;
+            border-top: 1px solid white;
+        }
+
+        .footer span{
+            color: #ffffff;
+        }
+
+        .header {
+            border-bottom: 1px solid white;
+        }
+
+        .todivtoybiblioy {
+            color: white;
+            border: 2px solid lightgrey;
+            box-shadow: rgba(255, 255, 255, 0.5) 0px 5px 15px;
+        }
+
+        /* .todivtoybiblioy:hover {
+            box-shadow: rgba(255, 255, 255, 0.6) 0px 5px 15px;
+        } */
+
+        .toinfo {
+            border: 2px solid lightgrey;
+            border-top: none;
+        }
+    
+}
+
+.header {
+    margin-top: 0px;
+    background-color: #333;
+    color: #fff;
+    height: 50px;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-item {
+    flex: 1;
+}
+
+.left-item1 {
+    flex: 1;
+}
+
+
+.container {
+    width: 80%;
+    margin-left: 0%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.footer {
+    z-index: 500;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid black;
+    height: auto;
+    background-color: white;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+}
+
+.todiv{
+    padding: 10px;
+    text-decoration: none;
+}
+
+.toa {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.todiv img {
+    width: 7%;
+}
+
+.todiv span {
+    font-size: 1em;
+    color: #333;
+}
+
+.divlogo{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.tologoA {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 100%;
+    width: 20%;
+    border: 2px solid grey;
+} 
+
+.divkeimeno {
+    padding: 20px;
+}
+
+.divkeimeno strong {
+    font-size: 20px;
+}
+
+.divkeimeno p {
+    font-size: 18px;
+}
+
+#toepi {
+    border-bottom : 2px solid blue;
+}
+
+.form-select {
+    color: white;
+    border: 1px solid lightgrey;
+    background-color: #333;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.mode {
+    cursor: pointer;
+    width: 2%;
+    margin-right: 30px;
+    padding: 0px 0px;
+}
+
+
+#darkmode {
+    display: block;
+}
+
+#lightmode {
+    display: none;
+}
+
+.left-item p {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.todivtoybiblioy {
+    /* cursor: pointer; */
+    z-index: 400;
+    display: flex;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 20%;
+    padding: 0px 10px;
+    width: 60%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
+
+
+/* .todivtoybiblioy:hover {
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+} */
+
+.todivtoybiblioy img {
+    width: 8%;
+}
+
+.bathmologia {
+    margin-right: 3%;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.downaroow{
+    margin-right: 5%;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.left-item1 {
+    margin-right: 10%;
+    text-decoration: none;
+    padding: 0px 10px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#tosig {
+    margin-top: -30px;
+}
+
+.toinfo {
+    z-index: 300;
+    height: auto;
+    border: 1px solid black;
+    margin-top: -8px;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    margin-left: 20%;
+    padding: 0px 10px;
+    width: 60%;
+}
+
+.toinfo p{
+    margin-left: 2%;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.waves {
+    text-align: center;
+}
+
+.waves img {
+    width: 15%;
+}
+
+:root {
+    --rad: .7rem;
+    --dur: .3s;
+    --color-dark: #2f2f2f;
+    --color-light: #fff;
+    --color-brand: #57bd84;
+    --font-fam: 'Lato', sans-serif;
+    --height: 3rem;
+    --btn-width: 6rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+    }
+    
+    form {
+    position: relative;
+    width: 61.5%;
+    margin-left: 20%;
+    border: 2px solid black;
+    background: var(--color-brand);
+    border-radius: var(--rad);
+    }
+    input, button {
+    height: var(--height);
+    font-family: var(--font-fam);
+    border: 0;
+    color: var(--color-dark);
+    font-size: 1.1rem;
+    }
+    input[type="search"] {
+    outline: 0; /* <-- should probably remove this for better accessibility, adding for demo aesthetics for now. */
+    width: 100%;
+    background: var(--color-light);
+    padding: 0 1.6rem;
+    border-radius: var(--rad);
+    appearance: none; /* for iOS input[type="search"] roundedness issue. border-radius alone doesn't work */
+    transition: all var(--dur) var(--bez);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+    }
+    button {
+    display: none; /* prevent being able to tab to it */
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    width: var(--btn-width);
+    font-weight: bold;
+    background: var(--color-brand);
+    border-radius: 0 var(--rad) var(--rad) 0;
+    }
+    input:not(:placeholder-shown) {
+    border-radius: var(--rad) 0 0 var(--rad);
+    width: calc(100% - var(--btn-width));
+    }
+    input:not(:placeholder-shown) + button {
+    display: block;
+    }
+    
+    label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    }
+    
+    .blog-post {
+    width: 99%;
+    background-color: #dbf4ff21;
+    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: .8rem;
+    margin: 10px;
+    margin-bottom: 5%;
+    }
+    
+    .blog-post_info {
+    padding: 15px;
+    }
+    
+    .blog-post_img {
+    min-width: 30%;
+    max-width: 30%;
+    height: 30%;
+    padding: 20px;
+    position: relative;
+    }
+    
+    .blog-post_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .8rem;
+    display: block;
+    }
+    
+    .blog-post_img img::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: .5rem .5rem 3rem 1px rgba(0, 0, 0, 0.5);
+    border-radius: .8rem;
+    }
+    
+    .blog-post_date {
+    text-align: right;
+    }
+    
+    .blog-post_date span {
+    display: block;
+    color: #00000080;
+    font-size: 14px;
+    font-weight: 500;
+    }
+    
+    .blog-post_title {
+    font-size: 20px;
+    margin-top: -10px;
+    color: black;
+    }
+    
+    .blog-post_text {
+    font-size: 18px;
+    color: black;
+    }
+    
+    .blog-post_cta {
+    display: inline-block;
+    letter-spacing: 1px;
+    color: black;
+    }
+
+/* Κανόνες CSS για tablet */
+@media (min-width: 601px) and (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin-left: 0%;
+        padding: 0px;
+    }
+
+    .todiv img {
+        width: 15%;
+    }
+
+    .heikona {
+    margin-left: 0%;
+}
+
+    .tologoA {
+        width: 40%;
+    } 
+    
+    .todiv span {
+        font-size: 1em;
+        color: #333;
+    }
+
+    .divmaximg {
+        display: flex;
+        position: fixed;
+        top: 20%;
+        left: 20%;
+        transform: translate(-10%, -10%);
+    }
+
+    .maxlogo {
+        margin-left: 0%;
+        width: 100%;
+        z-index: 999;
+        border-radius: 100%;
+    }
+
+    .mode {
+    width: 4%;
+}
+
+.todivtoybiblioy {
+    margin-left: 5%;
+    width: 85%;
+}
+
+.toinfo {
+    margin-left: 5%;
+    width: 85%;
+}
+
+form {
+    width: 90%;
+    margin-left: 5%;
+    }
+
+    .waves img {
+        width: 40%;
+    }
+}
+
+/* Κανόνες CSS για κινητά */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin-left: 0%;
+        padding: 0px;
+    }
+
+    .todiv img {
+        width: 20%;
+    }
+
+    .heikona {
+    margin-left: 0%;
+}
+
+    .tologoA {
+        width: 40%;
+    }
+    
+    .todiv span {
+        font-size: 1em;
+        color: #333;
+    }
+
+    .divmaximg {
+        display: flex;
+        position: fixed;
+        top: 30%;
+        left: 20%;
+        transform: translate(-12%, -10%);
+    }
+
+    .maxlogo {
+        margin-left: 0%;
+        width: 100%;
+        z-index: 999;
+        border-radius: 100%;
+    }
+
+    
+.mode {
+    width: 6%;
+}
+
+    .todivtoybiblioy {
+        margin-left: 5%;
+        width: 85%;
+    }
+
+    .toinfo {
+        margin-left: 5%;
+        width: 85%;
+    }
+
+    form {
+        width: 90%;
+        margin-left: 5%;
+        }
+
+        .waves img {
+            width: 40%;
+        }
+}
