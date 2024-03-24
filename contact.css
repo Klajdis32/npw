@@ -309,11 +309,11 @@ margin-left: 5%;
 
 .contactdiv {
     width: 95%;
-    height: 40px;
+    height: auto;
 }  
 
     .contactdiv img {
-    width: 8%;
+    width: 10%;
     } 
 
     .contactdiv p {
