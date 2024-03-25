@@ -227,7 +227,7 @@ display: flex;
 align-items: center;
 border-radius: .8rem;
 margin: 10px;
-margin-bottom: 5%;
+margin-bottom: 3%;
 }
 
 .blog-post_info {
@@ -345,6 +345,7 @@ display: none;
 @media screen and (max-width: 1068px) {
 .blog-post {
     max-width: 80rem;
+    margin-bottom: 5%;
 }
 .blog-post_img {
     margin-top: 15px;
@@ -357,6 +358,7 @@ display: none;
 @media screen and (max-width: 868px) {
 .blog-post {
     max-width: 70rem;
+    margin-bottom: 5%;
 }
 
 }
@@ -366,7 +368,7 @@ display: none;
     width: 91%;
     margin-left: 5%;
     padding: 0rem;
-    margin-bottom: 15%;
+    margin-bottom: 5%;
     flex-direction: column;
 }
 .blog-post_img {
@@ -562,8 +564,7 @@ input, button {
 }
 
 .arrow img {
-
-    width: 8%;
+    width: 10%;
 }
 
 .waves img {

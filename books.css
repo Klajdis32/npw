@@ -469,6 +469,23 @@ body {
         display: none;
     }
 
+    .arrow {
+        position: sticky;
+        bottom: 100px; 
+        text-align: right;
+        z-index: 9999;
+        margin-right: 5%;
+    }
+    
+    .arrow img {
+    cursor: pointer;
+    width: 3%;
+    }
+    
+    #uparrow {
+        display: none;
+    }
+
 /* Κανόνες CSS για tablet */
 @media (min-width: 601px) and (max-width: 768px) {
     .container {
@@ -637,5 +654,13 @@ form {
             margin-top: 5%;
             width: 10%;
             height: 10%;
+        }
+
+        .arrow {
+            margin-right: 5%;
+        }
+        
+        .arrow img {
+            width: 10%;
         }
 }

@@ -24,7 +24,6 @@
     <img src="images/lightmode.png" alt="" class="mode" id="lightmode">
 </div>
 
-
 <div class="container">
     <br>
     <div style="text-align: center;"><h2>Books i have read</h2></div>
@@ -60,6 +59,10 @@
     </div>
 
     <br><br><br><br><br><br>
+
+    <div class="arrow" id="uparrow">
+        <img src="images/up-arrow.png" alt="" >
+    </div>
 
     
     <div class="footer">
@@ -98,6 +101,35 @@
 </body>
 
 <script>
+
+window.onload = function() {
+    var arrow = document.getElementById('uparrow');
+
+    // Εμφάνιση/απόκρυψη του κουμπιού ανάλογα με τη θέση του χρήστη
+    window.onscroll = function() {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            arrow.style.display = 'block';
+        } else {
+            arrow.style.display = 'none';
+        }
+    };
+
+    // Ομαλή κύλιση προς την κορυφή της σελίδας όταν πατηθεί το κουμπί
+    arrow.onclick = function() {
+        scrollToTop(500); // 500 milliseconds για την ομαλή κύλιση
+    };
+
+    // Συνάρτηση για ομαλή κύλιση προς την κορυφή της σελίδας
+    function scrollToTop(scrollDuration) {
+        var scrollStep = -window.scrollY / (scrollDuration / 15),
+            scrollInterval = setInterval(function(){
+            if ( window.scrollY != 0 ) {
+                window.scrollBy( 0, scrollStep );
+            }
+            else clearInterval(scrollInterval); 
+        },15);
+    }
+};
 
     function createDynamicContent() {
         var container = document.getElementById("dynamicContentContainer");
@@ -261,6 +293,7 @@
             localStorage.removeItem("darkModeEnabled");
         }
     });
+
 
 </script>
 
