@@ -150,6 +150,8 @@ window.onload = function() {
                     <div class="left-item1">
                         <p>${post.Titlos}</p>
                     </div>
+
+                    ${post.xeraki ? `<img src="images/output-onlinegiftools.gif" alt="" id="xerakigif">` : ''}
                 </div>
 
                 <div class="toinfo" id="infoid-${post.id}" style="display: none;">
@@ -172,8 +174,11 @@ window.onload = function() {
 
     function toggleInfo(id) {
         var infoDiv = document.getElementById(`infoid-${id}`);
+        var togif = document.getElementById("xerakigif");
+
         if (infoDiv.style.display === "none") {
             infoDiv.style.display = "block";
+            togif.style.display = "none";
         } else {
             infoDiv.style.display = "none";
         }

@@ -7,6 +7,7 @@ const books = [
     // },
     {
         id: "29",
+        xeraki: true,
         Katigoria: "Personal Growth & Self improvement", 
         Titlos: "Algorithms to Live by, by Christian Brian and Griffiths Tom", 
         sxolio_simperasma: "Το βιβλίο Algorithms to Live By από τους Brian Christian και Tom Griffiths αναδεικνύει τον κόσμο των αλγορίθμων και την εφαρμογή τους στην καθημερινή ζωή. Οι συγγραφείς εξετάζουν πώς οι αλγόριθμοι της επιστήμης των υπολογιστών μπορούν να χρησιμοποιηθούν για να ληφθούν αποφάσεις σε διάφορους τομείς της ζωής, όπως η αναζήτηση εργασίας, η διαχείριση του χρόνου, η αναζήτηση συντρόφου και η οικονομική λήψη αποφάσεων"
