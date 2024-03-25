@@ -87,43 +87,43 @@
 
     <script>
        document.addEventListener("DOMContentLoaded", function() {
-    // Έλεγχος αν υπάρχει αποθηκευμένη προτίμηση για dark mode
-    const isDarkMode = localStorage.getItem("darkModeEnabled") === "true";
+        // Έλεγχος αν υπάρχει αποθηκευμένη προτίμηση για dark mode
+        const isDarkMode = localStorage.getItem("darkModeEnabled") === "true";
 
-    // Εάν έχει αποθηκευτεί η προτίμηση για dark mode, εφαρμόζουμε το αντίστοιχο στυλ
-    if (isDarkMode) {
-        document.body.classList.add("dark-mode");
-        document.getElementById("darkmode").style.display = "none";
-        document.getElementById("lightmode").style.display = "block";
-    }
+        // Εάν έχει αποθηκευτεί η προτίμηση για dark mode, εφαρμόζουμε το αντίστοιχο στυλ
+        if (isDarkMode) {
+            document.body.classList.add("dark-mode");
+            document.getElementById("darkmode").style.display = "none";
+            document.getElementById("lightmode").style.display = "block";
+        }
 
-    // Προσθέτουμε ακροατές στα κουμπιά dark mode και light mode
-    document.getElementById("darkmode").addEventListener("click", function() {
-        enableDarkMode();
+        // Προσθέτουμε ακροατές στα κουμπιά dark mode και light mode
+        document.getElementById("darkmode").addEventListener("click", function() {
+            enableDarkMode();
+        });
+
+        document.getElementById("lightmode").addEventListener("click", function() {
+            disableDarkMode();
+        });
+
+        // Συνάρτηση για ενεργοποίηση dark mode
+        function enableDarkMode() {
+            document.body.classList.add("dark-mode");
+            document.getElementById("darkmode").style.display = "none";
+            document.getElementById("lightmode").style.display = "block";
+            // Αποθηκεύουμε την επιλογή του χρήστη στο localStorage
+            localStorage.setItem("darkModeEnabled", "true");
+        }
+
+        // Συνάρτηση για απενεργοποίηση dark mode
+        function disableDarkMode() {
+            document.body.classList.remove("dark-mode");
+            document.getElementById("darkmode").style.display = "block";
+            document.getElementById("lightmode").style.display = "none";
+            // Αφαιρούμε την αποθηκευμένη προτίμηση από το localStorage
+            localStorage.removeItem("darkModeEnabled");
+        }
     });
-
-    document.getElementById("lightmode").addEventListener("click", function() {
-        disableDarkMode();
-    });
-
-    // Συνάρτηση για ενεργοποίηση dark mode
-    function enableDarkMode() {
-        document.body.classList.add("dark-mode");
-        document.getElementById("darkmode").style.display = "none";
-        document.getElementById("lightmode").style.display = "block";
-        // Αποθηκεύουμε την επιλογή του χρήστη στο localStorage
-        localStorage.setItem("darkModeEnabled", "true");
-    }
-
-    // Συνάρτηση για απενεργοποίηση dark mode
-    function disableDarkMode() {
-        document.body.classList.remove("dark-mode");
-        document.getElementById("darkmode").style.display = "block";
-        document.getElementById("lightmode").style.display = "none";
-        // Αφαιρούμε την αποθηκευμένη προτίμηση από το localStorage
-        localStorage.removeItem("darkModeEnabled");
-    }
-});
 
 
 function createDynamicContent() {

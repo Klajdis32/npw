@@ -187,7 +187,7 @@ body {
 }
 
 .todivtoybiblioy {
-    /* cursor: pointer; */
+    cursor: pointer;
     z-index: 400;
     display: flex;
     height: auto;
@@ -200,12 +200,16 @@ body {
 }
 
 
-/* .todivtoybiblioy:hover {
+.todivtoybiblioy:hover {
     box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
-} */
+}
 
 .todivtoybiblioy img {
-    width: 8%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 1%;
+    width: 4%;
+    height: 7%;
 }
 
 .bathmologia {
@@ -232,6 +236,7 @@ body {
 }
 
 .toinfo {
+    display: none;
     z-index: 300;
     height: auto;
     border: 2px solid black;
@@ -395,6 +400,17 @@ body {
     color: black;
     }
 
+    .notFoundMessage{
+        margin-left: 5%;
+        width: 95%;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+    #anoike{
+        display: block;
+    }
+
 /* Κανόνες CSS για tablet */
 @media (min-width: 601px) and (max-width: 768px) {
     .container {
@@ -500,26 +516,39 @@ form {
     }
 
     
-.mode {
-    width: 6%;
-}
-
-    .todivtoybiblioy {
-        margin-left: 5%;
-        width: 85%;
+    .mode {
+        width: 6%;
     }
 
-    .toinfo {
-        margin-left: 5%;
-        width: 85%;
-    }
+        .todivtoybiblioy {
+            margin-left: 5%;
+            width: 85%;
+        }
 
-    form {
+        .toinfo {
+            margin-left: 5%;
+            width: 85%;
+        }
+
+        form {
         width: 90%;
         margin-left: 5%;
         }
 
         .waves img {
             width: 40%;
+        }
+
+        .notFoundMessage{
+            margin-left: 5%;
+            width: 95%;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .todivtoybiblioy img {
+            margin-top: 3%;
+            width: 10%;
+            height: 10%;
         }
 }
