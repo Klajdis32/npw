@@ -147,7 +147,9 @@ function filterBooks(searchTerm) {
         if (
             post.Titlos.toLowerCase().includes(trimmedSearchTerm.toLowerCase()) 
             ||
-            post.bathmos.toLowerCase().includes(trimmedSearchTerm.toLowerCase())
+            post.Katigoria.toLowerCase().includes(trimmedSearchTerm.toLowerCase())
+            ||
+            post.sxolio_simperasma.toLowerCase().includes(trimmedSearchTerm.toLowerCase())
             ) {
             var wrapDiv = document.createElement("div");
             wrapDiv.className = "wrap";
