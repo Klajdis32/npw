@@ -3,7 +3,6 @@ const books = [
     //     id: "",
     //     Titlos: "", 
     //     Katigoria: "", 
-    //     
     //     sxolio_simperasma: ""
     // },
     {
@@ -23,7 +22,8 @@ const books = [
         Katigoria: "The Art of War, by Sun Tzu", 
         Titlos: "The Art of War, by Sun Tzu", 
         sxolio_simperasma: "A book written about 2,500 years ago about planning and conducting military operations in China. The ideas and suggestions written in the book are also applicable in the modern world in which competition prevails."
-    },{
+    },
+    {
         id: "6",
         Katigoria: "Science fiction", 
         Titlos: "Brave New World, by Aldous Huxley", 

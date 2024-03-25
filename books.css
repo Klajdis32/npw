@@ -524,12 +524,23 @@ body {
 }
 
 form {
-    width: 90%;
+    width: 88%;
     margin-left: 5%;
     }
 
     .waves img {
         width: 40%;
+    }
+
+      
+    .todivtoybiblioyPIN {
+        margin-left: 5%;
+        width: 85%;
+    }
+
+    .toinfoPIN {
+        margin-left: 5%;
+        width: 85%;
     }
 }
 
@@ -589,15 +600,16 @@ form {
             width: 85%;
         }
 
+        .toinfoPIN {
+            margin-left: 5%;
+            width: 85%;
+        }
+
         .toinfo {
             margin-left: 5%;
             width: 85%;
         }
 
-        .toinfoPIN {
-            margin-left: 5%;
-            width: 85%;
-        }
 
         form {
         width: 90%;
