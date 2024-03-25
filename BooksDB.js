@@ -7,22 +7,16 @@ const books = [
     //     sxolio_simperasma: ""
     // },
     {
-        id: "10",
+        id: "9",
         Katigoria: "Personal Growth & Self improvement", 
         Titlos: "Be Obsessed or Be Average, by Grant Cardone", 
         sxolio_simperasma: "In a few words, in this book Grand Cardon tells us that if you are not passionate about what you do and do not work hard every day for many years to achieve it, then you will remain average."
     },
     {
-        id: "9",
+        id: "8",
         Katigoria: "Personal Growth & Self improvement", 
         Titlos: "The 10X Rule, by Grant Cardone", 
         sxolio_simperasma: "The main idea of this book is that if you have a goal, you should work so hard that you try to achieve ten times that goal, this will make you sure that you have achieved your original goal and that you will look beyond, rather than trying hard to reach only the original goal."
-    },
-    {
-        id: "8",
-        Katigoria: "Personal Growth & Self improvement", 
-        Titlos: "Make Your Bed: Little Things That Can Change Your Life...And Maybe the World, by William H. McRaven", 
-        sxolio_simperasma: "The basic idea of the book is that: If you want to change the world, start off by making your bed. If every day we wake up we make our bed, this will give us motivation to continue doing things during the day, this also reinforces the fact that small things in life have enormous significance."
     },
     {
         id: "7",

@@ -99,58 +99,57 @@
 
 <script>
 
-function createDynamicContent() {
-    var container = document.getElementById("dynamicContentContainer");
-    var loadingDiv = document.getElementById("loadingDiv");
-    var tokrifo = document.getElementById("tokrifo");
+    function createDynamicContent() {
+        var container = document.getElementById("dynamicContentContainer");
+        var loadingDiv = document.getElementById("loadingDiv");
+        var tokrifo = document.getElementById("tokrifo");
 
-    // Εμφάνιση του loading div
-    loadingDiv.style.display = "block";
-    container.style.display = "none";
+        // Εμφάνιση του loading div
+        loadingDiv.style.display = "block";
+        container.style.display = "none";
 
-    for (let i = 0; i < books.length; i++) {
-        var post = books[i];
-        var wrapDiv = document.createElement("div");
-        wrapDiv.className = "wrap";
+        for (let i = 0; i < books.length; i++) {
+            var post = books[i];
+            var wrapDiv = document.createElement("div");
+            wrapDiv.className = "wrap";
 
-        wrapDiv.innerHTML = `
-            <div class="todivtoybiblioy" id="divid-${post.id}" onclick="toggleInfo(${post.id})">
-                <div class="left-item1">
-                    <p>${post.Titlos}</p>
+            wrapDiv.innerHTML = `
+                <div class="todivtoybiblioy" id="divid-${post.id}" onclick="toggleInfo(${post.id})">
+                    <div class="left-item1">
+                        <p>${post.Titlos}</p>
+                    </div>
+
+                    <img src="images/icons8-double-arrow-96.png" alt="">
                 </div>
 
-                <img src="images/icons8-double-arrow-96.png" alt="">
-            </div>
-
-            <div class="toinfo" id="infoid-${post.id}" style="display: none;">
+                <div class="toinfo" id="infoid-${post.id}" style="display: none;">
+                    <br>
+                    <p><strong>Category: </strong>${post.Katigoria}</p>
+                    <p><strong>Comment / Conclusion: </strong>${post.sxolio_simperasma}</p>
+                </div>
                 <br>
-                <p><strong>Category: </strong>${post.Katigoria}</p>
-                <p><strong>Comment / Conclusion: </strong>${post.sxolio_simperasma}</p>
-            </div>
-            <br>
-        `;
+            `;
 
-        container.appendChild(wrapDiv);
+            container.appendChild(wrapDiv);
+        }
+
+        setTimeout(function() {
+            loadingDiv.style.display = "none";
+            container.style.display = "block";
+            tokrifo.style.display = "block";
+        }, 3000);
     }
 
-    setTimeout(function() {
-        loadingDiv.style.display = "none";
-        container.style.display = "block";
-        tokrifo.style.display = "block";
-    }, 3000);
-}
-
-function toggleInfo(id) {
-    var infoDiv = document.getElementById(`infoid-${id}`);
-    if (infoDiv.style.display === "none") {
-        infoDiv.style.display = "block";
-    } else {
-        infoDiv.style.display = "none";
+    function toggleInfo(id) {
+        var infoDiv = document.getElementById(`infoid-${id}`);
+        if (infoDiv.style.display === "none") {
+            infoDiv.style.display = "block";
+        } else {
+            infoDiv.style.display = "none";
+        }
     }
-}
 
-createDynamicContent();
-
+    createDynamicContent();
 
     function filterBooks(searchTerm) {
         var trimmedSearchTerm = searchTerm.trim(); // Εφαρμογή της μεθόδου trim()
@@ -205,7 +204,6 @@ createDynamicContent();
                 foundResults = true; 
             }
         }
-
 
         if (!foundResults) {
             var notFoundMessage = document.createElement("p");
