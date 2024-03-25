@@ -314,15 +314,16 @@ font-weight: 550;
 }
 
 .arrow {
-position: fixed;
-bottom: 100px; 
-right: -25%;
-z-index: 9999;
+    position: sticky;
+    bottom: 100px; 
+    text-align: right;
+    z-index: 9999;
+    margin-right: 5%;
 }
 
 .arrow img {
 cursor: pointer;
-width: 10%;
+width: 3%;
 }
 
 #uparrow {
@@ -458,21 +459,20 @@ display: none;
     font-weight: 550;
 }
 
-.arrow {
-    position: fixed;
-    bottom: 100px; 
-    right: -100%;
-    z-index: 9999;
-}
 
 .arrow img {
     cursor: pointer;
-    width: 10%;
+    width: 8%;
 }
 
 .waves img {
 width: 40%;
 }
+
+form {
+    margin-left: 5%;
+    width: 90%;
+    }
 }
 
 /* Κανόνες CSS για κινητά */
@@ -561,14 +561,11 @@ input, button {
 }
 
 .arrow {
-    position: fixed;
-    bottom: 100px; 
-    right: -100%;
-    z-index: 9999;
+    margin-right: 5%;
 }
 
 .arrow img {
-    cursor: pointer;
+
     width: 8%;
 }
 

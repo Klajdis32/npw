@@ -46,11 +46,26 @@ body {
             box-shadow: rgba(255, 255, 255, 0.5) 0px 5px 15px;
         }
 
-        /* .todivtoybiblioy:hover {
+        .todivtoybiblioy:hover {
             box-shadow: rgba(255, 255, 255, 0.6) 0px 5px 15px;
-        } */
+        }
 
         .toinfo {
+            border: 2px solid lightgrey;
+            border-top: none;
+        }
+
+        .todivtoybiblioyPIN {
+            color: white;
+            border: 2px solid lightgrey;
+            box-shadow: rgba(255, 255, 255, 0.5) 0px 5px 15px;
+        }
+
+        .todivtoybiblioyPIN:hover {
+            box-shadow: rgba(255, 255, 255, 0.6) 0px 5px 15px;
+        }
+
+        .toinfoPIN {
             border: 2px solid lightgrey;
             border-top: none;
         }
@@ -212,6 +227,27 @@ body {
     height: 7%;
 }
 
+.todivtoybiblioyPIN {
+    cursor: pointer;
+    z-index: 400;
+    display: flex;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 5%;
+    padding: 0px 10px;
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
+
+.todivtoybiblioyPIN img {
+    text-align: center;
+    justify-content: center;
+    margin-top: 1%;
+    width: 4%;
+    height: 7%;
+}
+
 .bathmologia {
     margin-right: 3%;
     font-weight: 600;
@@ -226,9 +262,9 @@ body {
 
 .left-item1 {
     text-decoration: none;
-    padding: 0px 10px;
-    font-weight: 600;
-    font-size: 20px;
+    padding: 0px 20px;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 #tosig {
@@ -249,6 +285,24 @@ body {
 }
 
 .toinfo p{
+    margin-left: 2%;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.toinfoPIN {
+    z-index: 300;
+    height: auto;
+    border: 2px solid black;
+    margin-top: -8px;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    margin-left: 5%;
+    padding: 0px 10px;
+    width: 90%;
+}
+
+.toinfoPIN p{
     margin-left: 2%;
     font-weight: 500;
     font-size: 18px;
@@ -411,6 +465,10 @@ body {
         display: block;
     }
 
+    #tokrifo {
+        display: none;
+    }
+
 /* Κανόνες CSS για tablet */
 @media (min-width: 601px) and (max-width: 768px) {
     .container {
@@ -525,7 +583,18 @@ form {
             width: 85%;
         }
 
+        
+        .todivtoybiblioyPIN {
+            margin-left: 5%;
+            width: 85%;
+        }
+
         .toinfo {
+            margin-left: 5%;
+            width: 85%;
+        }
+
+        .toinfoPIN {
             margin-left: 5%;
             width: 85%;
         }
@@ -548,6 +617,12 @@ form {
 
         .todivtoybiblioy img {
             margin-top: 3%;
+            width: 10%;
+            height: 10%;
+        }
+
+        .todivtoybiblioyPIN img {
+            margin-top: 5%;
             width: 10%;
             height: 10%;
         }

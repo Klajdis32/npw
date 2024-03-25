@@ -27,13 +27,30 @@
 
 <div class="container">
     <br>
-    <div style="text-align: center;"><h2>Books i have read:</h2></div>
+    <div style="text-align: center;"><h2>Books i have read</h2></div>
     <br>
     <form onsubmit="event.preventDefault();" role="search">
         <input id="search" type="search" placeholder="Αναζήτηση..." autofocus required />
         <button type="submit">Go</button>    
     </form>
     <br><br>
+
+    <div id="tokrifo">
+        <div class="todivtoybiblioyPIN">
+            <div class="left-item1">
+                <p>Make Your Bed: Little Things That Can Change Your Life...And Maybe the World, by William H. McRaven</p>
+            </div>
+
+            <img src="images/pin.png" alt="">
+        </div>
+
+        <div class="toinfoPIN">
+            <br>
+            <p><strong>Category: </strong>Personal Growth & Self improvement</p>
+            <p><strong>Comment / Conclusion: </strong>The basic idea of the book is that: If you want to change the world, start off by making your bed. If every day we wake up we make our bed, this will give us motivation to continue doing things during the day, this also reinforces the fact that small things in life have enormous significance.</p>
+        </div>
+        <br>
+    </div>
 
     <div id="dynamicContentContainer"></div>
 
@@ -85,6 +102,7 @@
 function createDynamicContent() {
     var container = document.getElementById("dynamicContentContainer");
     var loadingDiv = document.getElementById("loadingDiv");
+    var tokrifo = document.getElementById("tokrifo");
 
     // Εμφάνιση του loading div
     loadingDiv.style.display = "block";
@@ -118,6 +136,7 @@ function createDynamicContent() {
     setTimeout(function() {
         loadingDiv.style.display = "none";
         container.style.display = "block";
+        tokrifo.style.display = "block";
     }, 3000);
 }
 
@@ -140,11 +159,12 @@ createDynamicContent();
         container.innerHTML = ''; // Αδειάζουμε το περιεχόμενο του container
 
         var loadingDiv = document.getElementById("loadingDiv");
+        var tokrifo = document.getElementById("tokrifo");
 
         // Εμφάνιση του loading div
         loadingDiv.style.display = "block";
         container.style.display = "none";
-
+        tokrifo.style.display = "none";
         
         setTimeout(function() {
             loadingDiv.style.display = "none";
