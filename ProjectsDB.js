@@ -144,7 +144,7 @@ const posts = [
         video: "/attachments/videos/video.mp4"
     },
     {
-        image: "/ProjectImages/ear.jpg", 
+        image: "", 
         Titlos: "Ultrasound", 
         Sigrafeas: "By me", 
         Date: "14/06/2023",
@@ -180,7 +180,7 @@ const posts = [
         video: ""
     },
     {
-        image: "/ProjectImages/thermometer1920.jpg", 
+        image: "", 
         Titlos: "Specific heat of materials", 
         Sigrafeas: "By me", 
         Date: "13/05/2023",
@@ -204,7 +204,7 @@ const posts = [
         video: ""
     },
     {
-        image: "/ProjectImages/ohmmeter-1920.jpg", 
+        image: "", 
         Titlos: "Useful electrical circuits", 
         Sigrafeas: "By me", 
         Date: "07/05/2023",
@@ -228,7 +228,7 @@ const posts = [
         video: ""
     },
     {
-        image: "/ProjectImages/Aero.jpg", 
+        image: "", 
         Titlos: "Simulation of linear motion", 
         Sigrafeas: "By me", 
         Date: "15/04/2023",
