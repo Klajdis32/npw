@@ -74,6 +74,11 @@ align-items: center;
     margin-left: 30%;
 }
 
+.container1 h2{
+    text-align: center;
+    width: 60%;
+}
+
 .left-item {
 flex: 1;
 }
@@ -157,7 +162,7 @@ font-size: 18px;
 .contactdiv {
     cursor: pointer;
     margin-bottom: 30px;
-    height: 50px;
+    height: 40px;
     width: 60%;
     display: flex;
     border: 2px solid white;
@@ -177,10 +182,12 @@ text-decoration: none;
 }
 
 .contactdiv img {
-width: 40%;
+    width: 30%;      
 } 
 
 .contactdiv p {
+    text-align: center;
+    margin-top: 10px;
 margin-left: 40px;
 font-weight: 550;
 font-size: 18px;
@@ -309,15 +316,22 @@ margin-left: 5%;
 
 .contactdiv {
     width: 95%;
-    height: 50px;
+    height: 30px;
 }  
 
     .contactdiv img {
-    width: 15%;
+    width: 50%;
+    height: 25px;
     } 
 
     .contactdiv p {
-        margin-top: 14px;
+        margin-top: 5px;
         }
+
+        .container1 h2{
+            text-align: center;
+            width: 100%;
+        }
+        
 
 }
