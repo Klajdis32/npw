@@ -53,8 +53,6 @@ box-shadow: rgba(255, 255, 255, 0.9) 0px 5px 15px;
     color: white;
     }
 
-
-
 }
 
 .header {
@@ -71,8 +69,37 @@ align-items: center;
 .container1 {
     margin-top: 3%;
     width: 60%;
-    margin-left: 30%;
+    margin-left: 20%;
+    margin-bottom: 20%;
+    text-align: center;
 }
+
+.container1 p {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.container1 span {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.toatoyhome {
+    text-decoration: none;
+    background-color: purple;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
+
+.toatoyhome:hover {
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+}
+
 
 .container1 h2{
     text-align: center;
@@ -147,9 +174,6 @@ font-size: 1em;
 color: #333;
 }
 
-#toepi {
-border-bottom : 2px solid blue;
-}
 
 .left-item p {
 text-decoration: none;
@@ -159,78 +183,10 @@ font-weight: 500;
 font-size: 18px;
 }
 
-.contactdiv {
-    cursor: pointer;
-    margin-bottom: 30px;
-    height: 40px;
-    width: 60%;
-    display: flex;
-    border: 2px solid white;
-    border-radius: 60px;
-    padding: 10px; 
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
-}  
-
-.contactdiv:hover {
-box-shadow: rgba(0, 0, 0, 0.9) 0px 5px 15px;
-}
-
-.contactdiv a {
-color: black;
-display: flex;
-text-decoration: none;
-}
-
-.contactdiv img {
-    width: 30%;      
-} 
-
-.contactdiv p {
-    text-align: center;
-    margin-top: 10px;
-margin-left: 40px;
-font-weight: 550;
-font-size: 18px;
-}
 
 /* Κανόνες CSS για tablet */
 @media (min-width: 601px) and (max-width: 768px) {
 
-    .todiv img {
-        width: 15%;
-    }
-
-    .heikona {
-    margin-left: 0%;
-    }
-
-    .tologoA {
-        width: 40%;
-    } 
-
-    .todiv span {
-        font-size: 1em;
-        color: #333;
-    }
-
-    .divmaximg {
-        display: flex;
-        position: fixed;
-        top: 20%;
-        left: 20%;
-        transform: translate(-10%, -10%);
-    }
-
-    .maxlogo {
-        margin-left: 0%;
-        width: 100%;
-        z-index: 999;
-        border-radius: 100%;
-    }
-
-    .mode {
-    width: 4%;
-    }
 
 
     .container1 {
@@ -238,25 +194,6 @@ font-size: 18px;
         width: 90%;
         margin-left: 5%;
     }
-
-    .contactdiv {
-        width: 95%;
-        height: 40px;
-    }  
-
-    .contactdiv img {
-        width: 30%;
-        } 
-
-        .contactdiv p {
-            margin-top: 10px;
-            }
-
-    }
-
-    /* Κανόνες CSS για κινητά */
-    @media (max-width: 600px) {
-
 
     .todiv img {
         width: 20%;
@@ -295,10 +232,49 @@ font-size: 18px;
     width: 6%;
     }
 
-    .kinito p {
-    width: 90%;
-    margin-left: 5%;
+    
+
     }
+
+    /* Κανόνες CSS για κινητά */
+    @media (max-width: 600px) {
+        .todiv img {
+            width: 20%;
+        }
+    
+        .heikona {
+        margin-left: 0%;
+        }
+    
+        .tologoA {
+            width: 40%;
+        }
+    
+        .todiv span {
+            font-size: 1em;
+            color: #333;
+        }
+    
+        .divmaximg {
+            display: flex;
+            position: fixed;
+            top: 30%;
+            left: 30%;
+            transform: translate(-20%, -10%);
+        }
+    
+        .maxlogo {
+            margin-left: 0%;
+            width: 100%;
+            z-index: 999;
+            border-radius: 100%;
+        }
+    
+    
+        .mode {
+        width: 6%;
+        }
+
 
     .container1 {
         margin-top: 10%;
@@ -306,24 +282,8 @@ font-size: 18px;
         margin-left: 5%;
     }
 
-    .contactdiv {
-        width: 95%;
-        height: 30px;
-    }  
+  
 
-    .contactdiv img {
-    width: 10%;
-    height: 30px;
-    } 
-
-    .contactdiv p {
-        margin-top: 5px;
-    }
-
-    .container1 h2{
-        text-align: center;
-        width: 100%;
-    }
         
 
 }

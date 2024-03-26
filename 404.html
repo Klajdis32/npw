@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+    <title>Contact</title>
+
+    <link rel="stylesheet" type="text/css" href="404.css">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="left-item">
+        <a href="/" style="text-decoration: none;">
+            <p>Klajdi Cami</p>
+        </a>
+    </div>
+
+    <img src="images/darkmode.png" alt="" class="mode" id="darkmode">
+    <img src="images/lightmode.png" alt="" class="mode" id="lightmode">
+</div>
+
+<div class="container1">
+
+    <p>404<br>Page not found!</p>
+
+    <img src="images/404.png" alt="" >
+    <br><br>
+    <span>We are sorry, the page you requested could not be found</span>
+    <br><br><br><br><br>
+    <a href="/" class="toatoyhome">Go to homepage</a>
+
+</div>
+
+  
+<div class="footer">
+            <a href="/" class="toa">
+                <div class="todiv">
+                        <img src="images/user12.png" alt=""><br>
+                        <span>Profil</span>
+                </div>
+            </a>
+            <a href="/projects.html" class="toa">
+                <div class="todiv">
+                        <img src="images/planning.png" alt=""><br>
+                        <span>Projects</span>
+                </div>
+            </a>
+            <a href="/books.html" class="toa">
+                <div class="todiv">
+                        <img src="images/book.png" alt=""><br>
+                        <span>Books</span>
+                </div>
+            </a>
+            <a href="/contact.html" class="toa">
+                <div class="todiv">
+                        <img src="images/send1.png" alt=""><br>
+                        <span id="toepi"><strong>Contact</strong></span>
+                </div>
+            </a>
+            <a href="/dap.html" class="toa">
+                <div class="todiv">
+                        <img src="images/astronomy.png" alt=""><br>
+                        <span>DAP</span>
+                </div>
+            </a>
+</div>
+
+</body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        // Έλεγχος αν υπάρχει αποθηκευμένη προτίμηση για dark 
+        const isDarkMode = localStorage.getItem("darkModeEnabled") === "true";
+
+        // Εάν έχει αποθηκευτεί η προτίμηση για dark mode, εφαρμόζουμε το αντίστοιχο στυλ
+        if (isDarkMode) {
+            document.body.classList.add("dark-mode");
+            document.getElementById("darkmode").style.display = "none";
+            document.getElementById("lightmode").style.display = "block";
+        }
+
+        // Προσθέτουμε ακροατές στα κουμπιά dark mode και light mode
+        document.getElementById("darkmode").addEventListener("click", function() {
+            enableDarkMode();
+        });
+
+        document.getElementById("lightmode").addEventListener("click", function() {
+            disableDarkMode();
+        });
+
+        // Συνάρτηση για ενεργοποίηση dark mode
+        function enableDarkMode() {
+            document.body.classList.add("dark-mode");
+            document.getElementById("darkmode").style.display = "none";
+            document.getElementById("lightmode").style.display = "block";
+            // Αποθηκεύουμε την επιλογή του χρήστη στο localStorage
+            localStorage.setItem("darkModeEnabled", "true");
+        }
+
+        // Συνάρτηση για απενεργοποίηση dark mode
+        function disableDarkMode() {
+                document.body.classList.remove("dark-mode");
+                document.getElementById("darkmode").style.display = "block";
+                document.getElementById("lightmode").style.display = "none";
+                // Αφαιρούμε την αποθηκευμένη προτίμηση από το localStorage
+                localStorage.removeItem("darkModeEnabled");
+            }
+        });
+
+    </script>
+
+</html>
