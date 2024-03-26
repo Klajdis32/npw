@@ -315,14 +315,13 @@ margin-left: 5%;
 }
 
 .contactdiv {
-    margin-top: -20px;
     width: 95%;
     height: 30px;
 }  
 
     .contactdiv img {
-    width: 10%;
-    height: 25px;
+    width: 25%;
+    height: 30px;
     } 
 
     .contactdiv p {
