@@ -166,7 +166,7 @@ font-size: 18px;
     width: 60%;
     display: flex;
     border: 2px solid white;
-    border-radius: 60px;
+    border-radius: 10px;
     padding: 10px; 
     box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }  
@@ -188,9 +188,8 @@ text-decoration: none;
 .contactdiv p {
     text-align: center;
     margin-top: 10px;
-margin-left: 40px;
-font-weight: 550;
-font-size: 18px;
+    margin-left: 40px;
+    font-size: 18px;
 }
 
 /* Κανόνες CSS για tablet */
@@ -312,12 +311,12 @@ font-size: 18px;
     }  
 
     .contactdiv img {
-    width: 10%;
+    width: 12%;
     height: 30px;
     } 
 
     .contactdiv p {
-        margin-top: 5px;
+        margin-top: 4px;
     }
 
     .container1 h2{
